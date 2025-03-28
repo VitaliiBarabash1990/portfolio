@@ -1,0 +1,265 @@
+{
+  "Error": {
+    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
+    "title": "Something went wrong!"
+  },
+  "IndexPage": {
+    "description": "Premium class services and courses for beginners and professionals.",
+    "title": "Eyelash extension master with 5 years of experience",
+    "button": "Sign up"
+  },
+  "ModalSignUp": {
+    "title_v1": "Sign up through the service:",
+    "title_v2": "Sign up by Gmail:"
+  },
+  "Master": {
+    "title": "About the master",
+    "description": "Hello!\n\nMy name is Anastasia and I am a certified eyelash extension artist with over 5 years of experience.\n\nMy main goal is to help each client feel confident and beautiful. My professional journey began with a sincere desire to create beauty. I have 5 certificates on my account confirming a high level of qualification."
+  },
+  "MyWork": {
+    "title": "My works on Instagram",
+    "button": "Subscribe"
+  },
+  "Accordion": {
+    "header_title": "Frequently asked questions",
+    "title": [
+      "Are eyelash extensions safe?",
+      "What materials are used?",
+      "What is included in the courses?",
+      "How to prepare for the procedure?"
+    ],
+    "content": [
+      "Eyelash extensions can be safe if the procedure is performed by a professional craftsman with quality materials and hygiene. It is important to take into account the health of the eyes and take care of the eyelashes after the procedure.",
+      "The quality of the procedure begins with the materials. Here's what you'll definitely need:\nTape - to protect the eyelids and fix the lower eyelashes.\nDegreaser and remover - tools for preparing eyelashes before extensions and for their safe removal.\nGlue - high-quality, resistant to moisture and temperature changes, because no one wants to eyelashes were peeled off after the first visit to the pool.\nTweezers – for various extension techniques.\nLashes – of different lengths, thicknesses, curves.",
+      "All necessary materials and tools for training. Methodical manuals (printed or electronic). International certificate. Support of the teacher within 1 month after the end of the course.",
+      "3 days before extensions, you should stop using oils, serums and other eyelash care products. The same applies to dyeing – if it is necessary, it is done in advance, a few days before the procedure."
+    ]
+  },
+  "AccordionServices": {
+    "header_title": "Our services",
+    "title": [
+      "Eyelash extension services",
+      "Lamination and lifting",
+      "Eyebrow care",
+      "Additional services"
+    ],
+    "content_1": {
+      "method": [
+        "Eyelash extensions using the 1:1 method",
+        "Eyelash extensions 1:3",
+        "2D eyelash extensions",
+        "4D eyelash extensions",
+        "Eyelash extensions 5-6D",
+        "Eyelash extensions Mega Volume 7-9D VIP",
+        "L-effect eyelash extensions",
+        "Kim Kardashian effect",
+        "«Anime» effect (3D, 4D, 5D)",
+        "The effect of wet eyelashes",
+        "Eyelash correction for up to 3 weeks",
+        "Removal of eyelashes"
+      ],
+      "duration": [
+        "Duration: 2 hours",
+        "Duration: 2 hours 30 minutes",
+        "Duration: 2 hours 30 minutes",
+        "Duration: 2 hours 30 minutes",
+        "Duration: 2 hours 45 minutes",
+        "Duration: 3 hours",
+        "Duration: 2 hours 45 minutes",
+        "Duration: 2 hours 45 minutes",
+        "Duration: 2 hours 45 minutes",
+        "Duration: 2 hours",
+        "Duration: 1 hour 45 minutes",
+        "Duration: 30 min"
+      ],
+      "price": [
+        "180 zl",
+        "200 zl",
+        "190 zl",
+        "210 zl",
+        "220 zl",
+        "240 zl",
+        "200 zl",
+        "220 zl",
+        "240 zl",
+        "190 zl",
+        "160 zl",
+        "40 zl"
+      ]
+    },
+    "content_2": {
+      "method": ["Eyelash lamination", "Eyelash and eyebrow lifting + botox"],
+      "duration": ["Duration: 1 hour", "Duration: 1 hour 30 minutes"],
+      "price": ["150 zl", "250 zl"]
+    },
+    "content_3": {
+      "method": [
+        "Lamination of eyebrows",
+        "Correction of eyebrows",
+        "Correction of eyebrows + henna for eyebrows",
+        "Henna for eyebrows",
+        "Powder henna for eyebrows"
+      ],
+      "duration": [
+        "Duration: 50 min",
+        "Duration: 15 min",
+        "Duration: 30 min",
+        "Duration: 20 min",
+        "Duration: 15 min"
+      ],
+      "price": ["140 zl", "35 zl", "70 zl", "35 zl", "35 zl"]
+    },
+    "content_4": {
+      "method": ["Henna for eyelashes", "Facial depilation"],
+      "duration": ["Duration: 20 min", "Duration: 30 min"],
+      "price": ["40 zl", "40 zl"]
+    },
+    "button": "Sign up"
+  },
+  "gallery": {
+    "title": "Gallery of works"
+  },
+  "training": {
+    "title": "Training courses",
+    "title_2": "Course program \"Professional eyelash extension\"",
+    "description": "Course duration: 3 days (18 hours)",
+    "title_3": "Graduation unit",
+    "descr_3": [
+      "Final testing (theoretical and practical).",
+      "Course Completion Certificate Presentation.",
+      "Recommendations for getting started: how to find your first customers and grow your business."
+    ],
+    "title_4": "What is included in the price of the course",
+    "descr_4": [
+      "All the necessary materials and tools for learning.",
+      "Methodological manuals (printed or electronic).",
+      "Certificate of international model.",
+      "Teacher's support for 1 month after completing the course."
+    ],
+    "section_1": {
+      "section_title": "Day 1\nTheoretical part",
+      "section_text_head": [
+        "Introduction: Basics of the profession",
+        "Hygiene and safety",
+        "Anatomy of eyelashes and eyes",
+        "Materials and tools",
+        "Master's workplace"
+      ],
+      "section_text": [
+        "What are eyelash extensions, the main Overview of current trends (1:1, 2D-9D, \"Kim Kardashian\", wet effect)",
+        "Sanitary standards and sterile Rules for working with clients for preservation",
+        "Types of eyelashes: natural characteristics and structures How to determine the optimal style of extensions depending on the shape of the eyes.",
+        "Overview of tools: tweezers, glue, pads, brushes. Types of false eyelashes: thickness, curves, length, material.",
+        "How to organize a comfortable and ergonomic place for work. Psychology of communication with clients."
+      ],
+      "button": "Sign up"
+    },
+    "section_2": {
+      "section_title": "Day 2\nPractice on training models",
+      "section_text_head": [
+        "Preparation for the procedure",
+        "Methods of building up",
+        "Learning to work with glue",
+        "Working with eye shapes"
+      ],
+      "section_text": [
+        "How to properly prepare natural eyelashes for extensions. Demonstration and practice of eyelash preparation.",
+        "Classic build-up (1:1). Volumetric augmentation (2D-9D). Modeling effects: \"cat look\", \"wet effect\", \"Kim Kardashian\".",
+        "Glue application technique. How to avoid gluing eyelashes.",
+        "Selection of length, curve and volume depending on the client's face. Practice on mannequins."
+      ],
+      "button": "Sign up"
+    },
+    "section_3": {
+      "section_title": "Day 3\nPractice on real models",
+      "section_text_head": [
+        "Complete build-up procedure",
+        "Correction and removal of eyelashes",
+        "Work with problem situations",
+        "Photos of works for the portfolio"
+      ],
+      "section_text": [
+        "Work with the first model under the supervision of the teacher. Error correction and technical improvement.",
+        "How to perform correction correctly. The technique of safe removal of eyelash extensions.",
+        "How to correct errors and asymmetry. Work with difficult clients.",
+        "How to properly photograph your work. Building your own brand in social networks."
+      ],
+      "button": "Sign up"
+    }
+  },
+  "contacts": {
+    "title": "Contact information",
+    "schedule": "Work schedule with",
+    "google_map": "Plać wolnosci Swiności 5/8, Poland, 72-600 Swinoujscie"
+  },
+  "formik": {
+    "title": "Fill out the form:",
+    "name": "Your name:",
+    "email": "Email:",
+    "number": "Phone number:",
+    "placeholder": ["Enter a name", "Enter email", "Enter your phone number"],
+    "yup": {
+      "name": [
+        "ONLY WORDS",
+        "Minimum 3 characters!",
+        "Maximum 30 characters!",
+        "This field is required!"
+      ],
+      "email": ["Invalid Email!", "Enter a valid email address!"],
+      "number": [
+        "Incorrect phone number!",
+        "Enter the number in the format +380123456789 or +48123456789 without spaces!"
+      ]
+    },
+    "button": "Sign up"
+  },
+  "LocaleLayout": {
+    "title": "portfolio fullstack developer",
+    "description": "portfolio fullstack developer"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, en {en} ua {ua} other {Unknown}}"
+  },
+  "Manifest": {
+    "name": "kolibry-studio.com"
+  },
+  "Navigation": {
+    "home": "Main",
+    "services": "Our services",
+    "gallery": "Gallery",
+    "courses": "Courses",
+    "contacts": "Contacts"
+  },
+  "NotFoundPage": {
+    "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
+    "title": "Page not found"
+  },
+  "PageLayout": {
+    "links": {
+      "docs": {
+        "description": "Learn more about next-intl in the official docs.",
+        "href": "https://next-intl-docs.vercel.app/",
+        "title": "Docs"
+      },
+      "source": {
+        "description": "Browse the source code of this example on GitHub.",
+        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
+        "title": "Source code"
+      }
+    }
+  },
+  "PathnamesPage": {
+    "description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to German, the URL is localized accordingly (<code>/de/pfadnamen</code>).</p>",
+    "title": "Pathnames"
+  },
+  "footer": {
+    "our_servises": "Our services",
+    "gallery": "Gallery of works",
+    "courses": "Training courses",
+    "contacts_info": "Contact information",
+    "about_master": "About the master",
+    "my_works": "My works on Instagram",
+    "questions": "Frequently asked questions"
+  }
+}

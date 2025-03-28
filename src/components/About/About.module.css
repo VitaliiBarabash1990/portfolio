@@ -1,0 +1,83 @@
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.aboutMe,
+.aboutMePhoto {
+  /* border: 1px solid var(--accent-button); */
+  width: 632px;
+  height: 589px;
+}
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+.aboutMePhoto {
+  position: absolute;
+  right: -96px;
+}
+.aboutMePhotoPicture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.aboutMeShadow {
+  position: absolute;
+  width: 632px;
+  height: 589px;
+  background: linear-gradient(180deg, rgba(0, 2, 5, 0) 85.5%, #000205 100%);
+  transform: rotate(0deg);
+  z-index: 1;
+}
+.aboutMeHead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  height: 39px;
+}
+.aboutMeTitle {
+  color: var(--accent-button);
+  font-size: 28px;
+  white-space: nowrap;
+}
+.fadingLine {
+  width: 451px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    /* rgba(255, 255, 255, 0) 0%, */ rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.downloadBtn {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 362px;
+  white-space: nowrap;
+  color: var(--white);
+  border-color: var(--white);
+  transform: scale(1);
+  transition: transform 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.downloadBtn:hover {
+  color: var(--accent-button);
+  border-color: var(--accent-button);
+  transform: scale(1.04);
+  transition: transform 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.downloadBtn:hover .iconFile {
+  fill: var(--accent-button);
+}
+.iconFile {
+  width: 24px;
+  height: 24px;
+  fill: var(--white);
+}

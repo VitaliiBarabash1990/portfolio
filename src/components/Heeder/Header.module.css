@@ -1,0 +1,12 @@
+.HeaderSection {
+  padding: 184px 72px 184px 96px;
+  height: 900px;
+  min-width: 1280px;
+}
+.HeaderWrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}

@@ -1,0 +1,116 @@
+.container__form {
+  width: 255px;
+  margin-top: 24px;
+  /* aspect-ratio: 3 / 4; */
+}
+.formik__title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--background-footer);
+  margin-bottom: 24px;
+}
+.formik__lashes_right {
+  display: none;
+}
+.formik__name_label {
+  text-align: left;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--black);
+  margin-bottom: 12px;
+}
+.formik__input,
+.formik__text_area {
+  border: 1px solid #c837ab;
+  background: rgba(200, 55, 171, 0);
+  max-width: 100%;
+}
+.formik__input {
+  height: 45px;
+  padding-left: 12px;
+}
+.formik__text_area {
+  height: 155px;
+  padding-left: 12px;
+}
+.formik__input::placeholder,
+.formik__text_area::placeholder {
+  font-size: 12px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+}
+.formik__btn {
+  padding: 21px;
+  width: 255px;
+  background: var(--button-color);
+}
+.formik__btn:hover {
+  background: var(--button-active);
+}
+
+@media screen and (min-width: 768px) {
+  .container__form {
+    width: 100%;
+    margin: 0;
+    padding: 50px;
+  }
+  .formik__lashes_right {
+    display: inline-flex;
+  }
+  .container__title_lashes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .formik__img_container {
+    position: absolute;
+    top: -80px;
+    right: -50px;
+  }
+  .form {
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .formik__input,
+  .formik__text_area {
+    width: 580px;
+  }
+  .formik__title {
+    font-size: 32px;
+  }
+  .formik__name_label {
+    font-size: 16px;
+  }
+  .formik__input::placeholder,
+  .formik__text_area::placeholder {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .form {
+    gap: 32px;
+  }
+  .formik__input,
+  .formik__text_area {
+    width: 824px;
+  }
+  .formik__title {
+    font-size: 48px;
+  }
+  .formik__name_label {
+    font-size: 24px;
+  }
+  .formik__input::placeholder,
+  .formik__text_area::placeholder {
+    font-size: 16px;
+  }
+}
