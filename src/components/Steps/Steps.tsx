@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionLayout from '../SectionLayout/SectionLayout';
 import s from './Steps.module.css';
+import AccordionList from '../AccordionList/AccordionList';
 
 const Steps = () => {
   return (
@@ -10,7 +11,9 @@ const Steps = () => {
           <h2 className={`title ${s.stepsHeadTitle}`}>Етапи співпраці</h2>
           <div className={s.fadingLine}></div>
         </li>
-        <li></li>
+        <li className={s.stepsAccordion}>
+          <AccordionList />
+        </li>
       </ul>
     </SectionLayout>
   );

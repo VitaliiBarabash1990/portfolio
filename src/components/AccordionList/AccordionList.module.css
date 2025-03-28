@@ -1,0 +1,43 @@
+.accordionWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+  row-gap: 31px;
+  width: 100%;
+}
+
+.accordionItem {
+  width: 100%;
+  min-height: 100px;
+}
+
+.accordionTrigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+}
+
+.stepNumber {
+  color: gray;
+  font-weight: bold;
+}
+
+.accordionContent {
+  overflow: hidden;
+  max-height: 0;
+  transition:
+    max-height 0.3s ease-out,
+    padding 0.3s ease-out;
+  padding: 0;
+}
+
+.accordionItem[data-state='open'] .accordionContent {
+  max-height: 100%;
+  padding: 10px;
+}
