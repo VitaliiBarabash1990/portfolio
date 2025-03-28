@@ -25,6 +25,13 @@
   --accent-button: #0f9;
   --gray: #696969;
   --gray-black: #282828;
+  --amiora-color: #777;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -32,6 +39,16 @@
   src:
     url('/fonts/MontserratAlternates-Regular.ttf') format('ttf'),
     url('/fonts/MontserratAlternates-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amiora';
+  src:
+    url('/fonts/AmioraRegular.ttf') format('ttf'),
+    url('/fonts/AmioraRegular.woff') format('woff'),
+    url('/fonts/AmioraRegular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }

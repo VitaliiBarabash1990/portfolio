@@ -1,0 +1,285 @@
+.sliderContainer {
+	position: relative;
+	width: 100%;
+	max-width: 320px;
+	margin: auto;
+}
+
+.swiper {
+	padding-bottom: 40px;
+	padding-top: 20px;
+}
+
+.slide {
+	display: flex;
+	justify-content: center;
+	height: auto;
+}
+
+.reviewCard {
+	background: white;
+	box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.1);
+	border-radius: 12px;
+	padding: 20px;
+	text-align: center;
+	max-width: calc(100% - 40px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.rating {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 5px;
+	margin-bottom: 12px;
+}
+.stars {
+	display: flex;
+	flex-direction: row;
+	gap: 14px;
+}
+
+.googleLogo {
+	width: 24px;
+	height: 24px;
+	margin-left: 8px;
+}
+
+.text {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 186%;
+	text-align: left;
+	color: var(--color-text);
+	margin-bottom: 15px;
+}
+
+.client {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	gap: 10px;
+}
+
+.name {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.navButton {
+	display: none;
+}
+
+.navButton_icon {
+	fill: var(--background-button);
+	min-width: 24px;
+	height: 24px;
+}
+.right {
+	rotate: 180deg;
+}
+
+.reviews_bloquote {
+	width: 24px;
+	height: 16px;
+	fill: var(--color-bloquote);
+	margin-bottom: 24px;
+}
+.reviews_client_overflov {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.avatar {
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+}
+
+@media screen and (min-width: 375px) {
+	.sliderContainer {
+		max-width: 600px;
+	}
+	.reviewCard {
+		max-width: calc(100% - 80px);
+	}
+
+	/* Навигационные кнопки */
+	.navButton {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background: white;
+		border: 2px solid var(--background-button);
+		padding: 10px;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		z-index: 999;
+	}
+
+	.navButton:hover .navButton_icon {
+		background: var(--background-button);
+		fill: var(--white);
+		border-radius: 50%;
+	}
+
+	.prevButton {
+		left: 0px;
+	}
+
+	.nextButton {
+		right: 0px;
+	}
+	.rating {
+		margin-bottom: 16px;
+	}
+}
+
+/* Стили для пагинации (точек) */
+.swiper-pagination-bullet {
+	background: gray;
+	opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+	background: orange;
+	opacity: 1;
+}
+
+.reviews_list_star_icon {
+	width: 24px;
+	height: 24px;
+	fill: var(--color-star);
+}
+.reviews_item_head_G {
+	width: 22px;
+	height: 21px;
+}
+.reviews_client_overflov {
+	width: 66px;
+	height: 66px;
+}
+
+@media screen and (min-width: 768px) {
+	.sliderContainer {
+		width: calc(100% - 64px);
+		max-width: 800px;
+	}
+	.swiper {
+		padding-bottom: 62px;
+	}
+	.reviewCard {
+		max-width: calc(100% - 80px);
+	}
+	.reviewCard {
+		max-width: calc(100% - 45px);
+	}
+	.navButton,
+	.navButton_icon {
+		min-width: 36px;
+		height: 36px;
+	}
+	.prevButton {
+		left: -36px;
+	}
+	.nextButton {
+		right: -36px;
+	}
+	.rating {
+		margin-bottom: 24px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.sliderContainer {
+		min-width: calc(100% - 96px);
+		padding-top: 48px;
+		/* padding-bottom: 40px; */
+	}
+	.stars {
+		gap: 0;
+	}
+	.slide {
+		max-width: calc((100% - 32px) / 3);
+		height: auto;
+	}
+	.reviewCard {
+		min-width: 100%;
+		box-shadow: 0px 4px 15px 4px rgba(0, 0, 0, 0.1);
+		background: #fff;
+	}
+	.swiper {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.swiper-wrapper {
+		overflow: hidden;
+	}
+	.navButton {
+		width: 48px;
+		height: 48px;
+	}
+	.prevButton {
+		left: -48px;
+	}
+	.nextButton {
+		right: -48px;
+	}
+	.text {
+		font-size: 16px;
+	}
+	.reviews_list_star_icon {
+		width: 38px;
+		height: 38px;
+	}
+	.reviews_item_head_G {
+		width: 47px;
+		height: 47px;
+	}
+	.reviews_bloquote {
+		width: 48px;
+		height: 38px;
+		margin-bottom: 30px;
+	}
+	.navButton_icon {
+		min-width: 48px;
+		height: 48px;
+	}
+	.rating {
+		margin-bottom: 36px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.sliderContainer {
+		max-width: 1248px;
+	}
+	.swiper {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	.text {
+		font-size: 18px;
+		line-height: 167%;
+	}
+	.reviews_bloquote {
+		width: 50px;
+		height: 37px;
+	}
+	.rating {
+		margin-bottom: 44px;
+	}
+}

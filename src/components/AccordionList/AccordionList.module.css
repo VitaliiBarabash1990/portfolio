@@ -4,40 +4,68 @@
   column-gap: 40px;
   row-gap: 31px;
   width: 100%;
+  align-items: start;
+  padding: 0 20px;
 }
 
 .accordionItem {
-  width: 100%;
+  width: 580px;
+  max-width: 100%;
   min-height: 100px;
+  position: relative;
 }
 
 .accordionTrigger {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
+  justify-content: space-between;
   font-size: 18px;
   cursor: pointer;
   background-color: transparent;
   border: none;
   width: 100%;
 }
-
-.stepNumber {
-  color: gray;
-  font-weight: bold;
+.accordionTriggerBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
 }
-
+.stepNumber {
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 150%;
+  color: var(--amiora-color);
+  font-weight: bold;
+  width: 40px;
+}
+.accordionTitle {
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--color-p);
+  text-align: left;
+}
+.accordionContentText {
+  font-family: var(--font-family);
+  font-size: 16px;
+}
 .accordionContent {
+  text-align: left;
   overflow: hidden;
   max-height: 0;
   transition:
     max-height 0.3s ease-out,
     padding 0.3s ease-out;
-  padding: 0;
+  position: absolute;
+  width: 100%;
+  background: var(--background);
+  z-index: 10;
 }
 
 .accordionItem[data-state='open'] .accordionContent {
   max-height: 100%;
-  padding: 10px;
+  position: relative;
 }
