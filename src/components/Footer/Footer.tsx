@@ -1,6 +1,5 @@
 import {useTranslations} from 'next-intl';
 import {Link} from '@/i18n/routing';
-import CustomLink from '../CustomLink/CustomLink';
 import s from './Footer.module.css';
 
 export default function Footer() {
@@ -9,7 +8,7 @@ export default function Footer() {
     <div className={`container ${s.footer__container}`}>
       <ul className={s.footer__left_list}>
         <li>
-          <Link href="/services" rel="stylesheet">
+          <Link href={{pathname: '/', hash: 'Services'}} rel="stylesheet">
             {t('our_servises')}
           </Link>
         </li>
