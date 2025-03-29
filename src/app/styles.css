@@ -26,11 +26,15 @@
   --gray: #696969;
   --gray-black: #282828;
   --amiora-color: #777;
+  --amiora-color-1: #5a5a5a;
+  --amiora-color-2: #c3c3c3;
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-Regular.ttf') format('ttf');
-  font-weight: normal;
+  src:
+    url('/fonts/Montserrat-Regular.ttf') format('ttf'),
+    url('/fonts/Montserrat-Regular.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
 }
 
