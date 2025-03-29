@@ -7,7 +7,7 @@
 .projectWraper {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   gap: 4px;
 }
@@ -39,7 +39,7 @@
 .projectRightSwiper {
   /* border: 1px solid var(--accent-button); */
   width: 1284px;
-  height: 1209px;
+  height: auto;
 }
 .fadingLine {
   width: 1029px;
@@ -110,6 +110,9 @@
   width: 18px;
   height: 18px;
   fill: var(--amiora-color-2);
+}
+.swiperIconTop {
+  transform: rotate(90deg);
 }
 .swiperBtn:hover {
   color: var(--accent-button);

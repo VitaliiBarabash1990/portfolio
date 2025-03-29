@@ -1,6 +1,7 @@
 import About from '@/components/About/About';
 import Programs from '@/components/Programs/Programs';
 import Projects from '@/components/Projects/Projects';
+import Services from '@/components/Services/Services';
 import Steps from '@/components/Steps/Steps';
 import {setRequestLocale} from 'next-intl/server';
 
@@ -18,6 +19,7 @@ export default function IndexPage({params: {locale}}: Props) {
       <Programs />
       <Projects />
       <Steps />
+      <Services />
     </>
   );
 }
