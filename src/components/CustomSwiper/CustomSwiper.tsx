@@ -14,9 +14,6 @@ type Props = {
 };
 
 const CustomSwiper = ({setActiveProject}: Props) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  console.log('activeIndex', activeIndex);
-
   return (
     <div className={s.sliderContainer}>
       <Swiper
@@ -30,7 +27,6 @@ const CustomSwiper = ({setActiveProject}: Props) => {
         modules={[Navigation]}
         loop={true}
         onSlideChange={(swiper) => {
-          setActiveIndex(swiper.realIndex);
           setActiveProject(projects[swiper.realIndex]); // Передаємо активний проект
         }}
         breakpoints={{

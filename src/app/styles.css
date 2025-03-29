@@ -22,12 +22,14 @@
   --background: #000205;
   --background-tech: #0f0f0f;
   --color-p: #fafafa;
+  --color-s: #969696;
   --accent-button: #0f9;
   --gray: #696969;
   --gray-black: #282828;
   --amiora-color: #777;
   --amiora-color-1: #5a5a5a;
   --amiora-color-2: #c3c3c3;
+  --arrow-color: #848484;
 }
 @font-face {
   font-family: 'Montserrat';

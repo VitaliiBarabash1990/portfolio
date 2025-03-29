@@ -10,9 +10,6 @@ const Projects = () => {
   const [activeProject, setActiveProject] = useState(projects[0]);
   const [short, setShort] = useState(true);
 
-  console.log('activeProject', activeProject);
-  console.log('short', short);
-
   const handleClick = () => {
     setShort((prev) => !prev);
   };
