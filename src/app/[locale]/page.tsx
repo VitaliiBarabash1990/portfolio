@@ -1,4 +1,5 @@
 import About from '@/components/About/About';
+import FaqSection from '@/components/FaqSection/FaqSection';
 import Programs from '@/components/Programs/Programs';
 import Projects from '@/components/Projects/Projects';
 import Services from '@/components/Services/Services';
@@ -20,6 +21,7 @@ export default function IndexPage({params: {locale}}: Props) {
       <Projects />
       <Steps />
       <Services />
+      <FaqSection />
     </>
   );
 }
