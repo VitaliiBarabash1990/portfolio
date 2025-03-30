@@ -21,8 +21,12 @@
   --black: #000;
   --background: #000205;
   --background-tech: #0f0f0f;
+  --border-form: #323335;
+  --background-form: #0f0f0f;
   --color-p: #fafafa;
   --color-s: #969696;
+  --color-f: #898989;
+  --color-label: #f3dfd8;
   --accent-button: #0f9;
   --accent-button-rgb: rgba(0, 255, 153, 0);
   --gray: #696969;
