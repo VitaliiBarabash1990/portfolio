@@ -55,7 +55,7 @@
   padding: 24px;
   background: var(--background-tech);
   border-radius: 8px;
-  border: 1px solid var(--accent-button);
+  border: 1px solid var(--accent-button-rgb);
   width: 100%;
   cursor: pointer;
 }
@@ -65,10 +65,13 @@
   justify-content: space-between;
   width: 100%;
 }
-
-.faqQuestionItemBtn:hover,
-.faqQuestionItemBtn:hover .faqIcon {
+.faqQuestionItem:hover {
+  border: 1px solid var(--accent-button);
+}
+.faqQuestionItem:hover .faqAnswerText {
   color: var(--accent-button);
+}
+.faqQuestionItem:hover .faqIcon {
   fill: var(--accent-button);
 }
 .faqIcon {
