@@ -1,4 +1,4 @@
-import {useTranslations} from 'next-intl';
+// import {useTranslations} from 'next-intl';
 import NavigationLink from '../NavigationLink/NavigationLink';
 import s from './NavigationMob.module.css';
 import clsx from 'clsx';
@@ -19,9 +19,9 @@ export const NavigationMob = ({isModal, setMenuOpen}: MyComponentProps) => {
     isModal && setMenuOpen(false);
   };
 
-  const t = useTranslations('Navigation');
+  // const t = useTranslations('Navigation');
 
-  const linkDatas: LinkData[] = [{id: 0, link: '/', text: t('home')}];
+  // const linkDatas: LinkData[] = [{id: 0, link: '/', text: t('')}];
 
   return (
     <ul className={clsx(s.navMenu, isModal && s.navMenu_modal)}>
