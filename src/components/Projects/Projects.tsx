@@ -71,7 +71,14 @@ const Projects = () => {
                   {activeProject.name}
                 </h5>
                 <p className={s.swiperText}>
-                  {short ? activeProject.text_short : activeProject.text_long}
+                  {short
+                    ? activeProject.text_short
+                    : activeProject.text_long.split('\n').map((line, index) => (
+                        <React.Fragment key={index}>
+                          {line}
+                          <br />
+                        </React.Fragment>
+                      ))}
                 </p>
                 <div className={s.swiperTypeWraper}>
                   <h5 className={`title ${s.swiperTypeTitle}`}>
