@@ -6,10 +6,11 @@ import NavigationLink from '../NavigationLink/NavigationLink';
 import s from './Navigation.module.css';
 import BurgerButton from '@/components/UI/BurgerButton/BurgerButton';
 import {useEffect, useState} from 'react';
-import {NavigationMob} from '../NavigationMob/NavigationMob';
+// import {NavigationMob} from '../NavigationMob/NavigationMob';
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const t = useTranslations('Navigation');
   const isModal = true;
 
   useEffect(() => {
@@ -25,7 +26,6 @@ export default function Navigation() {
       document.documentElement.classList.remove('no-scroll');
     };
   }, [menuOpen]);
-  const t = useTranslations('Navigation');
 
   return (
     <div className={s.navigation}>
@@ -42,7 +42,7 @@ export default function Navigation() {
                     ?.scrollIntoView({behavior: 'smooth'});
                 }}
               >
-                Про мене
+                {t('about')}
               </NavigationLink>
             </li>
             <li className={s.navBarMenu_item}>
@@ -55,7 +55,7 @@ export default function Navigation() {
                     ?.scrollIntoView({behavior: 'smooth'});
                 }}
               >
-                Проекти
+                {t('projects')}
               </NavigationLink>
             </li>
             <li className={s.navBarMenu_item}>
@@ -68,7 +68,7 @@ export default function Navigation() {
                     ?.scrollIntoView({behavior: 'smooth'});
                 }}
               >
-                Послуги та ціни
+                {t('price')}
               </NavigationLink>
             </li>
             <li className={s.navBarMenu_item}>
@@ -81,7 +81,7 @@ export default function Navigation() {
                     ?.scrollIntoView({behavior: 'smooth'});
                 }}
               >
-                Етапи співпраці
+                {t('steps')}
               </NavigationLink>
             </li>
           </ul>
@@ -112,7 +112,7 @@ export default function Navigation() {
                 ?.scrollIntoView({behavior: 'smooth'});
             }}
           >
-            До проектів
+            {t('toProjects')}
             <svg className={s.linkIcon}>
               <use href="/symbol-defs.svg#icon-arrow-bottom-left"></use>
             </svg>
@@ -130,7 +130,7 @@ export default function Navigation() {
       </nav>
 
       <div className={`${s.menu_burger} ${menuOpen ? s.open : ''}`}>
-        <NavigationMob isModal={isModal} setMenuOpen={setMenuOpen} />
+        {/* <NavigationMob isModal={isModal} setMenuOpen={setMenuOpen} /> */}
       </div>
     </div>
   );

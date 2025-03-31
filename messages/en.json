@@ -1,196 +1,152 @@
 {
-  "Error": {
-    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
-    "title": "Something went wrong!"
+  "Hero": {
+    "description_1": "Hello, my name is Vitalii and I am",
+    "description_2": "I develop fast and reliable web applications that solve real tasks. Clean code, optimized performance, and flawless user experience are my top priorities.",
+    "title": "FULLSTACK DEVELOPER",
+    "button": "Discuss the project"
   },
-  "IndexPage": {
-    "description": "Premium class services and courses for beginners and professionals.",
-    "title": "Eyelash extension master with 5 years of experience",
-    "button": "Sign up"
+  "Navigation": {
+    "about": "About me",
+    "projects": "Projects",
+    "price": "Services and prices",
+    "steps": "Stages of cooperation",
+    "toProjects": "To the projects"
   },
-  "ModalSignUp": {
-    "title_v1": "Sign up through the service:",
-    "title_v2": "Sign up by Gmail:"
+  "About": {
+    "about": "About me",
+    "description": "I am a fullstack developer specializing in creating fast, responsive and user-friendly websites. My goal is not just to make the site «working», but to create a technologically perfect product that will provide users with a comfortable interaction experience. I work with modern technologies such as Next.js, React, TypeScript, which allows you to create productive, SEO-optimized sites with flexible architecture. Thanks to these technologies, your site will load quickly, work correctly on all devices and easily scale as your business grows.",
+    "download": "Download resume"
   },
-  "Master": {
-    "title": "About the master",
-    "description": "Hello!\n\nMy name is Anastasia and I am a certified eyelash extension artist with over 5 years of experience.\n\nMy main goal is to help each client feel confident and beautiful. My professional journey began with a sincere desire to create beauty. I have 5 certificates on my account confirming a high level of qualification."
+  "Programs": {
+    "title": "Technologies and applications",
+    "bottomTitle_1": "Web Development:",
+    "bottomTitle_2": "from design to launch"
   },
-  "MyWork": {
-    "title": "My works on Instagram",
-    "button": "Subscribe"
-  },
-  "Accordion": {
-    "header_title": "Frequently asked questions",
-    "title": [
-      "Are eyelash extensions safe?",
-      "What materials are used?",
-      "What is included in the courses?",
-      "How to prepare for the procedure?"
-    ],
-    "content": [
-      "Eyelash extensions can be safe if the procedure is performed by a professional craftsman with quality materials and hygiene. It is important to take into account the health of the eyes and take care of the eyelashes after the procedure.",
-      "The quality of the procedure begins with the materials. Here's what you'll definitely need:\nTape - to protect the eyelids and fix the lower eyelashes.\nDegreaser and remover - tools for preparing eyelashes before extensions and for their safe removal.\nGlue - high-quality, resistant to moisture and temperature changes, because no one wants to eyelashes were peeled off after the first visit to the pool.\nTweezers – for various extension techniques.\nLashes – of different lengths, thicknesses, curves.",
-      "All necessary materials and tools for training. Methodical manuals (printed or electronic). International certificate. Support of the teacher within 1 month after the end of the course.",
-      "3 days before extensions, you should stop using oils, serums and other eyelash care products. The same applies to dyeing – if it is necessary, it is done in advance, a few days before the procedure."
+  "Footer": {
+    "title": "Let's discuss the project?",
+    "description": "Write to me in one of the messengers or leave your contacts, and I will contact you soon to provide advice and agree on the details of cooperation! I am open to discussing your project, ready to listen to your ideas and offer the best solutions for their implementation. Together we will be able to create an effective, stylish and functional web product that will meet your business goals. It is easy to work with me, I am always in touch and ready to provide support at all stages of development.",
+    "name": "Name",
+    "nameDescr": "Enter a name",
+    "email": "Email",
+    "emailDescr": "Enter your Email",
+    "answer": "Your question",
+    "answerDescr": "Write your question here ...",
+    "button": "Order a consultation",
+    "req": [
+      "ONLY WORDS!",
+      "Minimum 3 characters!",
+      "Maximum 30 characters!",
+      "This field is required!",
+      "Incorrect email!",
+      "Keep a valid email!",
+      "The message must contain from 10 to 500 characters!"
     ]
   },
-  "AccordionServices": {
-    "header_title": "Our services",
-    "title": [
-      "Eyelash extension services",
-      "Lamination and lifting",
-      "Eyebrow care",
-      "Additional services"
+  "Projects": {
+    "title": "Projects",
+    "text_short": [
+      "The business card site for the lash maker is the site of the Kolibry Studio beauty studio, specializing in eyelash extensions and training for professionals. It is possible to register through the form on the website, or the bus service. The main purpose of the website is to showcase the studio, its services and professional approach.",
+      "The business card site is the site of the ventilation system company, which specializes in the installation of ventilation systems in residential premises, as well as in the premises of enterprises. The website has implemented the possibility of communication through the form. The main purpose of the website is to demonstrate the professional services provided by the firm."
     ],
-    "content_1": {
-      "method": [
-        "Eyelash extensions using the 1:1 method",
-        "Eyelash extensions 1:3",
-        "2D eyelash extensions",
-        "4D eyelash extensions",
-        "Eyelash extensions 5-6D",
-        "Eyelash extensions Mega Volume 7-9D VIP",
-        "L-effect eyelash extensions",
-        "Kim Kardashian effect",
-        "«Anime» effect (3D, 4D, 5D)",
-        "The effect of wet eyelashes",
-        "Eyelash correction for up to 3 weeks",
-        "Removal of eyelashes"
-      ],
-      "duration": [
-        "Duration: 2 hours",
-        "Duration: 2 hours 30 minutes",
-        "Duration: 2 hours 30 minutes",
-        "Duration: 2 hours 30 minutes",
-        "Duration: 2 hours 45 minutes",
-        "Duration: 3 hours",
-        "Duration: 2 hours 45 minutes",
-        "Duration: 2 hours 45 minutes",
-        "Duration: 2 hours 45 minutes",
-        "Duration: 2 hours",
-        "Duration: 1 hour 45 minutes",
-        "Duration: 30 min"
-      ],
-      "price": [
-        "180 zl",
-        "200 zl",
-        "190 zl",
-        "210 zl",
-        "220 zl",
-        "240 zl",
-        "200 zl",
-        "220 zl",
-        "240 zl",
-        "190 zl",
-        "160 zl",
-        "40 zl"
-      ]
-    },
-    "content_2": {
-      "method": ["Eyelash lamination", "Eyelash and eyebrow lifting + botox"],
-      "duration": ["Duration: 1 hour", "Duration: 1 hour 30 minutes"],
-      "price": ["150 zl", "250 zl"]
-    },
-    "content_3": {
-      "method": [
-        "Lamination of eyebrows",
-        "Correction of eyebrows",
-        "Correction of eyebrows + henna for eyebrows",
-        "Henna for eyebrows",
-        "Powder henna for eyebrows"
-      ],
-      "duration": [
-        "Duration: 50 min",
-        "Duration: 15 min",
-        "Duration: 30 min",
-        "Duration: 20 min",
-        "Duration: 15 min"
-      ],
-      "price": ["140 zl", "35 zl", "70 zl", "35 zl", "35 zl"]
-    },
-    "content_4": {
-      "method": ["Henna for eyelashes", "Facial depilation"],
-      "duration": ["Duration: 20 min", "Duration: 30 min"],
-      "price": ["40 zl", "40 zl"]
-    },
-    "button": "Sign up"
-  },
-  "gallery": {
-    "title": "Gallery of works"
-  },
-  "training": {
-    "title": "Training courses",
-    "title_2": "Course program \"Professional eyelash extension\"",
-    "description": "Course duration: 3 days (18 hours)",
-    "title_3": "Graduation unit",
-    "descr_3": [
-      "Final testing (theoretical and practical).",
-      "Course Completion Certificate Presentation.",
-      "Recommendations for getting started: how to find your first customers and grow your business."
+    "text_long": [
+      "Kolibry Studio is a modern beauty studio website specializing in eyelash extensions and professional training. The main purpose of the platform is to present the studio, its services and high level of professionalism. \nThe site has an adaptive design and provides users with the opportunity to familiarize themselves with services, sign up for procedures or training, as well as receive advice. \nI performed: \n Frontend development based on Next.js \nOptimized site performance \nImproved SEO and loading speed \nUsed \ntailwind CSS to create responsive UI/UX \nDeployed site on Vercel \nConfigured build and CI/CD \nResults: \nImproved site usability and navigation \nFast page loading thanks to Next.js optimization \nCreated responsive and aesthetic \nattractive interface",
+      "Ventilation System is a web platform of a company that specializes in installing ventilation systems in residential and commercial premises. The main purpose of the site is to demonstrate the company's professional services, as well as to help users choose and order the appropriate ventilation equipment. \nThe site has an adaptive design and provides detailed information about products, their characteristics and the ability to contact consultants. \nI did: \nFrontend development using Next.js \nCreation of dynamic pages for products and categories \nOptimization of site loading speed and SEO \nImplementation of feedback forms and data storage \nUsing Tailwind CSS for responsive design \nProject deployment on Vercel \nResults: \nImproved navigation and UX, which provides convenient product selection \nFast page loading thanks to Next.js optimization \nImplemented a feedback form and the ability to leave applications \nAdaptive design that works correctly on mobile devices"
     ],
-    "title_4": "What is included in the price of the course",
-    "descr_4": [
-      "All the necessary materials and tools for learning.",
-      "Methodological manuals (printed or electronic).",
-      "Certificate of international model.",
-      "Teacher's support for 1 month after completing the course."
-    ],
-    "section_1": {
-      "section_title": "Day 1\nTheoretical part",
-      "section_text_head": [
-        "Introduction: Basics of the profession",
-        "Hygiene and safety",
-        "Anatomy of eyelashes and eyes",
-        "Materials and tools",
-        "Master's workplace"
-      ],
-      "section_text": [
-        "What are eyelash extensions, the main Overview of current trends (1:1, 2D-9D, \"Kim Kardashian\", wet effect)",
-        "Sanitary standards and sterile Rules for working with clients for preservation",
-        "Types of eyelashes: natural characteristics and structures How to determine the optimal style of extensions depending on the shape of the eyes.",
-        "Overview of tools: tweezers, glue, pads, brushes. Types of false eyelashes: thickness, curves, length, material.",
-        "How to organize a comfortable and ergonomic place for work. Psychology of communication with clients."
-      ],
-      "button": "Sign up"
-    },
-    "section_2": {
-      "section_title": "Day 2\nPractice on training models",
-      "section_text_head": [
-        "Preparation for the procedure",
-        "Methods of building up",
-        "Learning to work with glue",
-        "Working with eye shapes"
-      ],
-      "section_text": [
-        "How to properly prepare natural eyelashes for extensions. Demonstration and practice of eyelash preparation.",
-        "Classic build-up (1:1). Volumetric augmentation (2D-9D). Modeling effects: \"cat look\", \"wet effect\", \"Kim Kardashian\".",
-        "Glue application technique. How to avoid gluing eyelashes.",
-        "Selection of length, curve and volume depending on the client's face. Practice on mannequins."
-      ],
-      "button": "Sign up"
-    },
-    "section_3": {
-      "section_title": "Day 3\nPractice on real models",
-      "section_text_head": [
-        "Complete build-up procedure",
-        "Correction and removal of eyelashes",
-        "Work with problem situations",
-        "Photos of works for the portfolio"
-      ],
-      "section_text": [
-        "Work with the first model under the supervision of the teacher. Error correction and technical improvement.",
-        "How to perform correction correctly. The technique of safe removal of eyelash extensions.",
-        "How to correct errors and asymmetry. Work with difficult clients.",
-        "How to properly photograph your work. Building your own brand in social networks."
-      ],
-      "button": "Sign up"
-    }
+    "type": ["Business card", "Landing", "Catalog", "Shop"],
+    "button_1": "View",
+    "button_2": "Collapse",
+    "button_3": "Go to the site"
   },
-  "contacts": {
-    "title": "Contact information",
-    "schedule": "Work schedule with",
-    "google_map": "Plać wolnosci Swiności 5/8, Poland, 72-600 Swinoujscie"
+  "Steps": {
+    "title": "Stages of cooperation",
+    "steps": [
+      {
+        "title": "Choice of technologies",
+        "text": "At this stage, we determine which technologies are best suited for your project. We analyze the requirements for speed, security and scalability of the site. We choose between Next.js, React, a database and other necessary tools for efficient work."
+      },
+      {
+        "title": "Backend Settings",
+        "text": "We connect the backend system, if the project requires it. We implement the API, configure the database, authorization and other server functions for the stable operation of the site."
+      },
+      {
+        "title": "Development of structure",
+        "text": "We form the logical structure of the future site or web application. We define key pages, components and routes to ensure convenient navigation and effective UX/UI."
+      },
+      {
+        "title": "Testing and Optimization",
+        "text": "We check the functionality of the site on different devices and browsers. We optimize performance, reduce loading time, adjust SEO and eliminate possible bugs."
+      },
+      {
+        "title": "Compilation and Integration",
+        "text": "We develop an adaptive and fast layout based on the layout. We integrate ready-made React components, configure the interaction between the frontend and the backend, if necessary."
+      },
+      {
+        "title": "Deployment and Support",
+        "text": "We deploy the site on the chosen hosting or server. We provide technical support, updates and performance monitoring for the smooth operation of the project."
+      }
+    ]
+  },
+  "Services": {
+    "title": "Services",
+    "typeServices": "Site layout",
+    "description": "Complex site creation: from design to launch",
+    "button_1": "Details",
+    "button_2": "Collapse",
+    "services": [
+      {
+        "type": "Landing",
+        "price": "From 200 USD",
+        "text_short": "A landing page is a one-page site that aims to attract customers and increase conversions. It is used to present a specific product, service or event, as well as to collect contact details of potential customers. They have a well-thought-out structure, visually appealing design and clear calls to action that contribute to the achievement of marketing goals.",
+        "text_long": "As a developer, I create responsive, fast and productive landing pages that not only attract attention, but also lead users to a specific action - purchase, registration or subscription. Using Next.js and React, I provide optimized loading speed, compatibility with mobile devices, cross-browser support and SEO optimization for better visibility in search engines. My landing pages can include interactive elements, animations, feedback forms, connection to CRM and analytical systems to track conversions. What's included: market and competitor research, page structure development, data collection form setup, analytics integration, mobile responsiveness, performance testing. Delivery time: 2-3 weeks."
+      },
+      {
+        "type": "Business card",
+        "price": "From 200 USD",
+        "text_short": "A business card site is a compact site (usually 3-5 pages) that presents basic information about a company, specialist or product. This is a great option for small businesses, freelancers, or personal brands that need a professional online presence to build visibility and trust.",
+        "text_long": "I develop business card sites with responsive design that look modern and inspire confidence in potential clients. Using Next.js and React, I ensure that pages load quickly, display correctly on different devices and browsers, and the functionality can be scaled in the future. In business card sites, you can implement integration with social networks, Google Maps, contact forms and connection to CMS for independent content editing. What's included: About Us, Services, Contact page development, form integration, galleries, SSL certificate setup, analytics connectivity. Delivery time: 3-4 weeks."
+      },
+      {
+        "type": "Directory",
+        "price": "From 200 USD",
+        "text_short": "A catalog is a multi-page site for the presentation of goods or services with the possibility of a detailed description, but without online shopping. It is suitable for businesses that want to provide information about their range or services, provide convenient navigation and structure.",
+        "text_long": "I develop catalog sites with clear navigation, quick search, filtering and sorting of products. I use Next.js and React technologies to ensure stable site operation, optimize loading speed, and effectively manage large amounts of data. I integrate with CRM to manage product and customer data, set up SEO to increase visibility in search engines. What is included: development of the main page, categories, product cards, integration of search filters, preparation for integration with CRM, configuration of analytics. Implementation period: 4-6 weeks."
+      },
+      {
+        "type": "Shop",
+        "price": "From 200 USD",
+        "text_short": "An online store is a site for online sales with a shopping cart, payment systems, an order management system and personal user accounts. It is suitable for businesses looking to automate sales processes and increase revenue through an online presence.",
+        "text_long": "I create online stores with full functionality, responsive design, integration of payment systems, shopping cart settings, product filtering, order management and user support. I use Next.js and React to ensure high performance, reliability and fast loading. Additionally, I configure integrations with CRM, product accounting systems, analytics and marketing tools. What's included: product pages, shopping cart, payment systems, personal user account, analytics integration, SEO optimization, CRM setup. Lead time: 6-8 weeks."
+      }
+    ]
+  },
+  "Faq": {
+    "faq": [
+      {
+        "id": 0,
+        "question": "How long does it take to develop a website?",
+        "answer": "The standard term for creating a landing page is 2-3 weeks, for an online store - 4-6 weeks. More precise terms depend on the complexity of the project."
+      },
+      {
+        "id": 1,
+        "question": "What technologies do you use?",
+        "answer": "I work with Next.js, React, TypeScript, and I also integrate APIs, configure the backend and optimize the site for fast work."
+      },
+      {
+        "id": 2,
+        "question": "Will the site be responsive?",
+        "answer": "Yes, I make all sites fully responsive so that they work correctly on smartphones, tablets and large screens."
+      },
+      {
+        "id": 3,
+        "question": "Will the site be optimized for SEO?",
+        "answer": "Yes, I use technologies that contribute to SEO optimization: fast loading, correct HTML structure, meta tags and responsiveness."
+      },
+      {
+        "id": 4,
+        "question": "Will it be possible to edit the site after launch?",
+        "answer": "Yes, the site will be created with the possibility of further editing and updating of content. If necessary, you can integrate CMS for convenient management."
+      }
+    ]
   },
   "formik": {
     "title": "Fill out the form:",
@@ -224,17 +180,6 @@
   "Manifest": {
     "name": "kolibry-studio.com"
   },
-  "Navigation": {
-    "home": "Main",
-    "services": "Our services",
-    "gallery": "Gallery",
-    "courses": "Courses",
-    "contacts": "Contacts"
-  },
-  "NotFoundPage": {
-    "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
-    "title": "Page not found"
-  },
   "PageLayout": {
     "links": {
       "docs": {
@@ -249,17 +194,8 @@
       }
     }
   },
-  "PathnamesPage": {
-    "description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to German, the URL is localized accordingly (<code>/de/pfadnamen</code>).</p>",
-    "title": "Pathnames"
-  },
-  "footer": {
-    "our_servises": "Our services",
-    "gallery": "Gallery of works",
-    "courses": "Training courses",
-    "contacts_info": "Contact information",
-    "about_master": "About the master",
-    "my_works": "My works on Instagram",
-    "questions": "Frequently asked questions"
+  "NotFoundPage": {
+    "description": "Please check your browser's address bar or use navigation to go to a familiar page.",
+    "title": "Page not found"
   }
 }

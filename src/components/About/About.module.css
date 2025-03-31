@@ -63,6 +63,7 @@
 .downloadBtn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 24px;
   min-width: 362px;
   white-space: nowrap;

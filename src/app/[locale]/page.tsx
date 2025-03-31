@@ -1,5 +1,7 @@
 import About from '@/components/About/About';
 import FaqSection from '@/components/FaqSection/FaqSection';
+import Footer from '@/components/Footer/Footer';
+import Header from '@/components/Heeder/Header';
 import Programs from '@/components/Programs/Programs';
 import Projects from '@/components/Projects/Projects';
 import Services from '@/components/Services/Services';
@@ -16,12 +18,14 @@ export default function IndexPage({params: {locale}}: Props) {
 
   return (
     <>
+      <Header />
       <About />
       <Programs />
       <Projects />
       <Steps />
       <Services />
       <FaqSection />
+      <Footer />
     </>
   );
 }

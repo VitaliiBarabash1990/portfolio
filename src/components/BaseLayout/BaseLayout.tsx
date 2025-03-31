@@ -3,8 +3,8 @@ import {Inter} from 'next/font/google';
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import {ReactNode} from 'react';
-import Footer from '@/components/Footer/Footer';
-import Header from '../Heeder/Header';
+// import Footer from '@/components/Footer/Footer';
+// import Header from '../Heeder/Header';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -21,10 +21,10 @@ export default async function BaseLayout({children, locale}: Props) {
   return (
     <html className="h-full" lang={locale}>
       <body className={clsx(inter.className, 'flex h-full flex-col')}>
-        <NextIntlClientProvider messages={messages}>
-          <Header />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {/* <Header /> */}
           <main>{children}</main>
-          <Footer />
+          {/* <Footer /> */}
         </NextIntlClientProvider>
         <div id="modal-root"></div>
       </body>

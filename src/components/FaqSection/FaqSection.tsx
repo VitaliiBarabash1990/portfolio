@@ -3,14 +3,43 @@
 import React, {useState} from 'react';
 import SectionLayout from '../SectionLayout/SectionLayout';
 import s from './FaqSection.module.css';
-import faqquestions from './faqquestion.json';
+import {useTranslations} from 'next-intl';
 
 const FaqSection = () => {
+  const t = useTranslations('Faq');
   const [activeIndex, setActiveIndex] = useState<null | number>(null);
 
   const handleClick = (index: number) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
+
+  const faqquestions = [
+    {
+      id: 0,
+      question: t('faq.0.question'),
+      answer: t('faq.0.answer')
+    },
+    {
+      id: 1,
+      question: t('faq.1.question'),
+      answer: t('faq.1.answer')
+    },
+    {
+      id: 2,
+      question: t('faq.2.question'),
+      answer: t('faq.2.answer')
+    },
+    {
+      id: 3,
+      question: t('faq.3.question'),
+      answer: t('faq.3.answer')
+    },
+    {
+      id: 4,
+      question: t('faq.4.question'),
+      answer: t('faq.4.answer')
+    }
+  ];
 
   return (
     <section id="Faq" className={`section ${s.sectionFaq}`}>

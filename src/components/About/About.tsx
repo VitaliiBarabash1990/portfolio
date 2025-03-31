@@ -1,29 +1,21 @@
 import React from 'react';
 import s from './About.module.css';
+import {useTranslations} from 'next-intl';
 
 const About = () => {
+  const t = useTranslations('About');
   return (
     <section id="About" className={`section ${s.sectionAbout}`}>
       <div className={`container`}>
         <ul className={s.about}>
           <li className={s.aboutMe}>
             <div className={s.aboutMeHead}>
-              <h2 className={`title ${s.aboutMeTitle}`}>Про мене</h2>
+              <h2 className={`title ${s.aboutMeTitle}`}>{t('about')}</h2>
               <div className={s.fadingLine}></div>
             </div>
-            <p className={s.aboutMeText}>
-              Я – fullstack-розробник, який спеціалізується на створенні
-              швидких, адаптивних і зручних веб-сайтів. Моя мета – не просто
-              зробити сайт «робочим», а створити технологічно досконалий
-              продукт, що забезпечить користувачам комфортний досвід взаємодії.
-              Я працюю з сучасними технологіями, такими як Next.js, React,
-              TypeScript, що дозволяє створювати продуктивні, SEO-оптимізовані
-              сайти з гнучкою архітектурою. Завдяки цим технологіям ваш сайт
-              буде швидко завантажуватися, коректно працювати на всіх пристроях
-              і легко масштабуватися при зростанні бізнесу.
-            </p>
+            <p className={s.aboutMeText}>{t('description')}</p>
             <button className={`button ${s.downloadBtn}`}>
-              Завантажити резюме{' '}
+              {t('download')}
               <svg className={s.iconFile}>
                 <use href="/symbol-defs.svg#icon-filetype-pdf"></use>
               </svg>

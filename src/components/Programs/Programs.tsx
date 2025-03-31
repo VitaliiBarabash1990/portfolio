@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './Programs.module.css';
+import {useTranslations} from 'next-intl';
 
 const ProgramsList = [
   {id: 0, icon: './img/programs/react.png', name: 'React.js'},
@@ -17,15 +18,14 @@ const ProgramsList = [
 ];
 
 const Programs = () => {
+  const t = useTranslations('Programs');
   return (
     <section id="Programs" className={`section ${s.sectionPrograms}`}>
       <div className={`container`}>
         <ul className={s.programsWrapper}>
           <li className={s.programsHead}>
             <div className={s.fadingLine}></div>
-            <h2 className={`title ${s.programsHeadTitle}`}>
-              Технології та програми
-            </h2>
+            <h2 className={`title ${s.programsHeadTitle}`}>{t('title')}</h2>
           </li>
           <li className={s.programsTech}>
             <ul className={s.programsTechList}>
@@ -39,9 +39,9 @@ const Programs = () => {
           </li>
           <li className={s.programsDescrTitle}>
             <h3 className={`title ${s.programsTitle}`}>
-              Веб-розробка: <br />
+              {t('bottomTitle_1')} <br />
               <span className={s.programsTitleBottom}>
-                від дизайну до запуску
+                {t('bottomTitle_2')}
               </span>
             </h3>
           </li>

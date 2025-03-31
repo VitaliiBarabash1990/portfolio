@@ -13,7 +13,7 @@ interface FormValues {
 }
 
 export default function Footer() {
-  const t = useTranslations('footer');
+  const t = useTranslations('Footer');
 
   const initialValues: FormValues = {
     name: '',
@@ -24,13 +24,13 @@ export default function Footer() {
   const onlyWords = /^[a-zA-Zа-яА-ЯіІєЄїЇ]+$/;
 
   const req = [
-    {p0: 'ТІЛЬКИ СЛОВА!'},
-    {p1: 'Мінімум 3 символа!'},
-    {p2: 'Максимум 30 символів!'},
-    {p3: "Це поле обов'язкове!"},
-    {p4: 'Не коректрий email!'},
-    {p5: 'Ведіть валідний email!'},
-    {p6: 'Повідомлення повинно містити від 10 до 500 символів!'}
+    {p0: t('req.0')},
+    {p1: t('req.1')},
+    {p2: t('req.2')},
+    {p3: t('req.3')},
+    {p4: t('req.4')},
+    {p5: t('req.5')},
+    {p6: t('req.6')}
   ];
 
   const orderSchema = Yup.object().shape({
@@ -73,22 +73,12 @@ export default function Footer() {
       <div className="container">
         <div className={s.footerWrapper}>
           <div className={s.footerTitleBlock}>
-            <h3 className={`title ${s.footerTitle}`}>Обговоримо проєкт?</h3>
+            <h3 className={`title ${s.footerTitle}`}>{t('title')}</h3>
             <div className={s.fadingLine}></div>
           </div>
           <ul className={s.footerTop}>
             <li className={s.footerDescrItem}>
-              <p className={s.footerText}>
-                Напишіть мені в одному з месенджерів або залиште свої контакти,
-                і я зв'яжусь із вами найближчим часом для надання консультації
-                та узгодження деталей співпраці! Я відкритий до обговорення
-                вашого проєкту, готовий вислухати ваші ідеї та запропонувати
-                найкращі рішення для їх реалізації. Разом ми зможемо створити
-                ефективний, стильний та функціональний веб-продукт, який
-                відповідатиме вашим бізнес-цілям. Зі мною легко працювати, я
-                завжди на зв'язку та готовий надати підтримку на всіх етапах
-                розробки.
-              </p>
+              <p className={s.footerText}>{t('description')}</p>
               <ul className={s.footerContact}>
                 <li className={s.footerContactItem}>
                   <a href="tel:+380639124311" className={s.footerText}>
@@ -145,12 +135,12 @@ export default function Footer() {
               >
                 <Form className={s.form}>
                   <label className={s.label}>
-                    <p className={s.nameLabel}>Ім’я</p>
+                    <p className={s.nameLabel}>{t('name')}</p>
                     <Field
                       className={s.input}
                       type="text"
                       name="name"
-                      placeholder="Введіть ім’я"
+                      placeholder={t('nameDescr')}
                     />
                     <ErrorMessage
                       name="name"
@@ -159,12 +149,12 @@ export default function Footer() {
                     />
                   </label>
                   <label className={s.label}>
-                    <p className={s.nameLabel}>Email</p>
+                    <p className={s.nameLabel}>{t('email')}</p>
                     <Field
                       className={s.input}
                       type="email"
                       name="email"
-                      placeholder="Введіть свій Email"
+                      placeholder={t('emailDescr')}
                     />
                     <ErrorMessage
                       name="email"
@@ -173,13 +163,13 @@ export default function Footer() {
                     />
                   </label>
                   <label className={s.label}>
-                    <p className={s.nameLabel}>Ваше питання</p>
+                    <p className={s.nameLabel}>{t('answer')}</p>
                     <Field
                       className={`${s.input} ${s.textArea}`}
                       as="textarea"
                       name="message"
                       row={3}
-                      placeholder="Напишіть сюди ваше питання ....."
+                      placeholder={t('answerDescr')}
                     />
                     <ErrorMessage
                       name="message"
@@ -187,7 +177,7 @@ export default function Footer() {
                       className={s.error}
                     />
                   </label>
-                  <button className={s.formBtn}>Замовити консультацію</button>
+                  <button className={s.formBtn}>{t('button')}</button>
                 </Form>
               </Formik>
             </li>

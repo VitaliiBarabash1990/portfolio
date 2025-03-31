@@ -5,41 +5,43 @@ import {
   AccordionContent
 } from '@/components/ui/accordion';
 import s from './AccordionList.module.css';
-
-const steps = [
-  {
-    number: 1,
-    title: 'Вибір технологій',
-    text: 'На цьому етапі ми визначаємо, які технології найкраще підходять для вашого проекту. Аналізуємо вимоги до швидкості, безпеки та масштабованості сайту. Обираємо між Next.js, React, базою даних та іншими необхідними інструментами для ефективної роботи.'
-  },
-  {
-    number: 4,
-    title: 'Налаштування бекенду',
-    text: 'Підключаємо бекенд-систему, якщо проект цього вимагає. Реалізуємо API, налаштовуємо базу даних, авторизацію та інші серверні функції для стабільної роботи сайту.'
-  },
-  {
-    number: 2,
-    title: 'Розробка структури',
-    text: 'Формуємо логічну структуру майбутнього сайту або веб-додатку. Визначаємо ключові сторінки, компоненти та маршрути, щоб забезпечити зручну навігацію та ефективний UX/UI.'
-  },
-  {
-    number: 5,
-    title: 'Тестування та оптимізація',
-    text: 'Перевіряємо функціональність сайту на різних пристроях і браузерах. Оптимізуємо продуктивність, зменшуємо час завантаження, налаштовуємо SEO та усуваємо можливі баги.'
-  },
-  {
-    number: 3,
-    title: 'Верстка та інтеграція',
-    text: 'Розробляємо адаптивну та швидку верстку на основі макета. Інтегруємо готові компоненти React, налаштовуємо взаємодію між фронтендом і бекендом, якщо потрібно.'
-  },
-  {
-    number: 6,
-    title: 'Деплой та підтримка',
-    text: 'Розгортаємо сайт на обраному хостингу або сервері. Надаємо технічну підтримку, оновлення та моніторинг продуктивності для безперебійної роботи проєкту.'
-  }
-];
+import {useTranslations} from 'next-intl';
 
 export default function AccordionList() {
+  const t = useTranslations('Steps');
+
+  const steps = [
+    {
+      number: 1,
+      title: t('steps.0.title'),
+      text: t('steps.0.text')
+    },
+    {
+      number: 4,
+      title: t('steps.1.title'),
+      text: t('steps.1.text')
+    },
+    {
+      number: 2,
+      title: t('steps.2.title'),
+      text: t('steps.2.text')
+    },
+    {
+      number: 5,
+      title: t('steps.3.title'),
+      text: t('steps.3.text')
+    },
+    {
+      number: 3,
+      title: t('steps.4.title'),
+      text: t('steps.4.text')
+    },
+    {
+      number: 6,
+      title: t('steps.5.title'),
+      text: t('steps.5.text')
+    }
+  ];
   return (
     <Accordion type="single" collapsible className={s.accordionWrapper}>
       {steps.map((step) => (

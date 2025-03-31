@@ -4,10 +4,39 @@ import React, {useState} from 'react';
 import s from './Projects.module.css';
 import CustomSwiper from '../CustomSwiper/CustomSwiper';
 import Link from 'next/link';
-import projects from '../CustomSwiper/projects.json';
+import {useTranslations} from 'next-intl';
+import {Project} from '@/types/types';
 
 const Projects = () => {
-  const [activeProject, setActiveProject] = useState(projects[0]);
+  const t = useTranslations('Projects');
+  const projectText = [
+    {
+      id: 1,
+      name: 'Kolibry Studio',
+      text_short: t('text_short.0'),
+      text_long: t('text_long.0'),
+      type: t('type.0'),
+      image: '/img/projects/project_1_x1.webp',
+      image_x2:
+        '/img/projects/project_1_x1.webp 1x, /img/projects/project_1_x2.webp 2x',
+      href: 'https://kolibry-studio-product-version.vercel.app/ua',
+      technology: ['Next.js', 'Redux', 'JavaScript', 'HTML', 'CSS']
+    },
+    {
+      id: 2,
+      name: 'Ventiliation System',
+      text_short: t('text_short.1'),
+      text_long: t('text_long.1'),
+      type: t('type.0'),
+      image: '/img/projects/project_2_x1.webp',
+      image_x2:
+        '/img/projects/project_2_x1.webp 1x, /img/projects/project_2_x2.webp 2x',
+      href: 'https://ventilation-system.vercel.app/',
+      technology: ['Next.js', 'Redux', 'JavaScript', 'HTML', 'CSS']
+    }
+  ];
+
+  const [activeProject, setActiveProject] = useState<Project>(projectText[0]);
   const [short, setShort] = useState(true);
 
   const handleClick = () => {
@@ -21,7 +50,7 @@ const Projects = () => {
           <li className={s.projectleftTitle}>
             <div className={s.projectleftTitleRotate}>
               <div className={s.fadingLine}></div>
-              <h3 className={`title ${s.projectTitle}`}>Проєкти</h3>
+              <h3 className={`title ${s.projectTitle}`}>{t('title')}</h3>
             </div>
           </li>
           <li className={s.projectRightSwiper}>
@@ -32,7 +61,10 @@ const Projects = () => {
                 </h4>
               </li>
               <li className={s.projectSwiperItem}>
-                <CustomSwiper setActiveProject={setActiveProject} />
+                <CustomSwiper
+                  setActiveProject={setActiveProject}
+                  projects={projectText}
+                />
               </li>
               <li className={s.projectSwiperItem}>
                 <h5 className={`title ${s.swiperNameTitle}`}>
@@ -42,9 +74,11 @@ const Projects = () => {
                   {short ? activeProject.text_short : activeProject.text_long}
                 </p>
                 <div className={s.swiperTypeWraper}>
-                  <h5 className={`title ${s.swiperTypeTitle}`}>Візитка</h5>
+                  <h5 className={`title ${s.swiperTypeTitle}`}>
+                    {activeProject.type}
+                  </h5>
                   <button className={s.swiperBtn} onClick={handleClick}>
-                    {short ? 'Переглянути' : 'Згорнути'}
+                    {short ? t('button_1') : t('button_2')}
                     <svg
                       className={
                         short
@@ -73,7 +107,7 @@ const Projects = () => {
                   href={activeProject.href}
                   target="_blank"
                 >
-                  Перейти на сайт
+                  {t('button_3')}
                 </Link>
               </li>
             </ul>

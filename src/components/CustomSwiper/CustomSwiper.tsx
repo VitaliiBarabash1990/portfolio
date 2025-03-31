@@ -1,19 +1,20 @@
 'use client';
 
-import React, {useState} from 'react';
+import React from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation} from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import s from './CustomSwiper.module.css';
-import projects from './projects.json';
+import {Project} from '@/types/types';
 
 type Props = {
-  setActiveProject: (project: (typeof projects)[number]) => void; // Правильний тип для функції
+  setActiveProject: (project: Project) => void;
+  projects: Project[];
 };
 
-const CustomSwiper = ({setActiveProject}: Props) => {
+const CustomSwiper = ({setActiveProject, projects}: Props) => {
   return (
     <div className={s.sliderContainer}>
       <Swiper

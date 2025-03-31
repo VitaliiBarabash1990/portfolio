@@ -13,13 +13,11 @@ type Props = {
 // }
 
 export default function PageLayout({children, title}: Props) {
-  const t = useTranslations('PageLayout');
-
   return (
     <>
-      {/* <header>
+      <header>
         <h1>{title}</h1>
-      </header> */}
+      </header>
       {children}
     </>
   );
