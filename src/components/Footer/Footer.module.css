@@ -1,6 +1,8 @@
+.sectionFooter {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .footerWrapper {
-  width: 1248px;
-  /* border: 1px solid var(--accent-button); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +38,6 @@
 }
 .footerDescrItem {
   width: 647px;
-  /* border: 1px solid var(--accent-button); */
   display: flex;
   flex-direction: column;
   gap: 48px;

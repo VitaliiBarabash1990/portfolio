@@ -1,13 +1,17 @@
+.sectionAbout {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .about {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  margin: 0 auto;
 }
 .aboutMe,
 .aboutMePhoto {
-  /* border: 1px solid var(--accent-button); */
   width: 632px;
   height: 589px;
 }

@@ -2,7 +2,6 @@
 
 import {useTranslations} from 'next-intl';
 import s from './Footer.module.css';
-import SectionLayout from '../SectionLayout/SectionLayout';
 import {ErrorMessage, Field, Form, Formik, FormikHelpers} from 'formik';
 import * as Yup from 'yup';
 import toast, {Toaster} from 'react-hot-toast';
@@ -70,129 +69,136 @@ export default function Footer() {
     }
   };
   return (
-    <SectionLayout id="Footer">
-      <div className={s.footerWrapper}>
-        <div className={s.footerTitleBlock}>
-          <h3 className={`title ${s.footerTitle}`}>Обговоримо проєкт?</h3>
-          <div className={s.fadingLine}></div>
-        </div>
-        <ul className={s.footerTop}>
-          <li className={s.footerDescrItem}>
-            <p className={s.footerText}>
-              Напишіть мені в одному з месенджерів або залиште свої контакти, і
-              я зв'яжусь із вами найближчим часом для надання консультації та
-              узгодження деталей співпраці! Я відкритий до обговорення вашого
-              проєкту, готовий вислухати ваші ідеї та запропонувати найкращі
-              рішення для їх реалізації. Разом ми зможемо створити ефективний,
-              стильний та функціональний веб-продукт, який відповідатиме вашим
-              бізнес-цілям. Зі мною легко працювати, я завжди на зв'язку та
-              готовий надати підтримку на всіх етапах розробки.
-            </p>
-            <ul className={s.footerContact}>
-              <li className={s.footerContactItem}>
-                <a href="tel:+380639124311" className={s.footerText}>
-                  +38 (063) 912 43 11
-                </a>
-              </li>
-              <li className={s.footerContactItem}>
-                <a
-                  href="mailto:vitalij.barabash007@gmail.com"
-                  className={s.footerText}
-                >
-                  vitalij.barabash007@gmail.com
-                </a>
-              </li>
-              <li className={s.footerSocial}>
-                <ul className={s.footerSocialList}>
-                  <li className={s.footerSocialItem}>
-                    <a href="">
-                      <svg className={s.footerSocIcon}>
-                        <use href="/symbol-defs.svg#icon-telegram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li className={s.footerSocialItem}>
-                    <a href="">
-                      <svg className={s.footerSocIcon}>
-                        <use href="/symbol-defs.svg#icon-watsapp"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li className={s.footerSocialItem}>
-                    <a href="">
-                      <svg className={s.footerSocIcon}>
-                        <use href="/symbol-defs.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li className={s.footerSocialItem}>
-                    <a href="">
-                      <svg className={s.footerSocIcon}>
-                        <use href="/symbol-defs.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li className={s.footerFormItem}>
-            <Formik
-              initialValues={initialValues}
-              onSubmit={handleAdd}
-              validationSchema={orderSchema}
-            >
-              <Form className={s.form}>
-                <label className={s.label}>
-                  <p className={s.nameLabel}>Ім’я</p>
-                  <Field
-                    className={s.input}
-                    type="text"
-                    name="name"
-                    placeholder="Введіть ім’я"
-                  />
-                  <ErrorMessage name="name" component="p" className={s.error} />
-                </label>
-                <label className={s.label}>
-                  <p className={s.nameLabel}>Email</p>
-                  <Field
-                    className={s.input}
-                    type="email"
-                    name="email"
-                    placeholder="Введіть свій Email"
-                  />
-                  <ErrorMessage
-                    name="email"
-                    component="p"
-                    className={s.error}
-                  />
-                </label>
-                <label className={s.label}>
-                  <p className={s.nameLabel}>Ваше питання</p>
-                  <Field
-                    className={`${s.input} ${s.textArea}`}
-                    as="textarea"
-                    name="message"
-                    row={3}
-                    placeholder="Напишіть сюди ваше питання ....."
-                  />
-                  <ErrorMessage
-                    name="message"
-                    component="p"
-                    className={s.error}
-                  />
-                </label>
-                <button className={s.formBtn}>Замовити консультацію</button>
-              </Form>
-            </Formik>
-          </li>
-        </ul>
+    <section className={`section ${s.sectionFooter}`}>
+      <div className="container">
+        <div className={s.footerWrapper}>
+          <div className={s.footerTitleBlock}>
+            <h3 className={`title ${s.footerTitle}`}>Обговоримо проєкт?</h3>
+            <div className={s.fadingLine}></div>
+          </div>
+          <ul className={s.footerTop}>
+            <li className={s.footerDescrItem}>
+              <p className={s.footerText}>
+                Напишіть мені в одному з месенджерів або залиште свої контакти,
+                і я зв'яжусь із вами найближчим часом для надання консультації
+                та узгодження деталей співпраці! Я відкритий до обговорення
+                вашого проєкту, готовий вислухати ваші ідеї та запропонувати
+                найкращі рішення для їх реалізації. Разом ми зможемо створити
+                ефективний, стильний та функціональний веб-продукт, який
+                відповідатиме вашим бізнес-цілям. Зі мною легко працювати, я
+                завжди на зв'язку та готовий надати підтримку на всіх етапах
+                розробки.
+              </p>
+              <ul className={s.footerContact}>
+                <li className={s.footerContactItem}>
+                  <a href="tel:+380639124311" className={s.footerText}>
+                    +38 (063) 912 43 11
+                  </a>
+                </li>
+                <li className={s.footerContactItem}>
+                  <a
+                    href="mailto:vitalij.barabash007@gmail.com"
+                    className={s.footerText}
+                  >
+                    vitalij.barabash007@gmail.com
+                  </a>
+                </li>
+                <li className={s.footerSocial}>
+                  <ul className={s.footerSocialList}>
+                    <li className={s.footerSocialItem}>
+                      <a href="">
+                        <svg className={s.footerSocIcon}>
+                          <use href="/symbol-defs.svg#icon-telegram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li className={s.footerSocialItem}>
+                      <a href="">
+                        <svg className={s.footerSocIcon}>
+                          <use href="/symbol-defs.svg#icon-watsapp"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li className={s.footerSocialItem}>
+                      <a href="">
+                        <svg className={s.footerSocIcon}>
+                          <use href="/symbol-defs.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li className={s.footerSocialItem}>
+                      <a href="">
+                        <svg className={s.footerSocIcon}>
+                          <use href="/symbol-defs.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li className={s.footerFormItem}>
+              <Formik
+                initialValues={initialValues}
+                onSubmit={handleAdd}
+                validationSchema={orderSchema}
+              >
+                <Form className={s.form}>
+                  <label className={s.label}>
+                    <p className={s.nameLabel}>Ім’я</p>
+                    <Field
+                      className={s.input}
+                      type="text"
+                      name="name"
+                      placeholder="Введіть ім’я"
+                    />
+                    <ErrorMessage
+                      name="name"
+                      component="p"
+                      className={s.error}
+                    />
+                  </label>
+                  <label className={s.label}>
+                    <p className={s.nameLabel}>Email</p>
+                    <Field
+                      className={s.input}
+                      type="email"
+                      name="email"
+                      placeholder="Введіть свій Email"
+                    />
+                    <ErrorMessage
+                      name="email"
+                      component="p"
+                      className={s.error}
+                    />
+                  </label>
+                  <label className={s.label}>
+                    <p className={s.nameLabel}>Ваше питання</p>
+                    <Field
+                      className={`${s.input} ${s.textArea}`}
+                      as="textarea"
+                      name="message"
+                      row={3}
+                      placeholder="Напишіть сюди ваше питання ....."
+                    />
+                    <ErrorMessage
+                      name="message"
+                      component="p"
+                      className={s.error}
+                    />
+                  </label>
+                  <button className={s.formBtn}>Замовити консультацію</button>
+                </Form>
+              </Formik>
+            </li>
+          </ul>
 
-        <div className={s.footerBootom}>
-          <p className={s.footerBootomText}>Created by Vitalii Barabash</p>
-          <p className={s.footerBootomText}>All rights reserved</p>
+          <div className={s.footerBootom}>
+            <p className={s.footerBootomText}>Created by Vitalii Barabash</p>
+            <p className={s.footerBootomText}>All rights reserved</p>
+          </div>
         </div>
       </div>
-    </SectionLayout>
+    </section>
   );
 }

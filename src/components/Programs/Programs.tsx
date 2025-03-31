@@ -1,5 +1,4 @@
 import React from 'react';
-import SectionLayout from '../SectionLayout/SectionLayout';
 import s from './Programs.module.css';
 
 const ProgramsList = [
@@ -19,34 +18,36 @@ const ProgramsList = [
 
 const Programs = () => {
   return (
-    <SectionLayout id="Programs">
-      <ul className={s.programsWrapper}>
-        <li className={s.programsHead}>
-          <div className={s.fadingLine}></div>
-          <h2 className={`title ${s.programsHeadTitle}`}>
-            Технології та програми
-          </h2>
-        </li>
-        <li className={s.programsTech}>
-          <ul className={s.programsTechList}>
-            {ProgramsList.map((list) => (
-              <li key={list.id} className={s.programsTechItem}>
-                <img src={list.icon} alt={`icon-${list.id}`} />
-                <p className={s.programsTechText}>{list.name}</p>
-              </li>
-            ))}
-          </ul>
-        </li>
-        <li className={s.programsDescrTitle}>
-          <h3 className={`title ${s.programsTitle}`}>
-            Веб-розробка: <br />
-            <span className={s.programsTitleBottom}>
-              від дизайну до запуску
-            </span>
-          </h3>
-        </li>
-      </ul>
-    </SectionLayout>
+    <section id="Programs" className={`section ${s.sectionPrograms}`}>
+      <div className={`container`}>
+        <ul className={s.programsWrapper}>
+          <li className={s.programsHead}>
+            <div className={s.fadingLine}></div>
+            <h2 className={`title ${s.programsHeadTitle}`}>
+              Технології та програми
+            </h2>
+          </li>
+          <li className={s.programsTech}>
+            <ul className={s.programsTechList}>
+              {ProgramsList.map((list) => (
+                <li key={list.id} className={s.programsTechItem}>
+                  <img src={list.icon} alt={`icon-${list.id}`} />
+                  <p className={s.programsTechText}>{list.name}</p>
+                </li>
+              ))}
+            </ul>
+          </li>
+          <li className={s.programsDescrTitle}>
+            <h3 className={`title ${s.programsTitle}`}>
+              Веб-розробка: <br />
+              <span className={s.programsTitleBottom}>
+                від дизайну до запуску
+              </span>
+            </h3>
+          </li>
+        </ul>
+      </div>
+    </section>
   );
 };
 

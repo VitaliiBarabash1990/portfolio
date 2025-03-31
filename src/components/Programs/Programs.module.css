@@ -1,7 +1,12 @@
+.sectionPrograms {
+  margin: 0 auto;
+  max-width: 1440px;
+}
 .programsWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 100%;
 }
 .programsHead {
   display: flex;

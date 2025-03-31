@@ -1,5 +1,7 @@
 .projectSection {
   padding: 97px 0 56px 0;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .projectContainer {
   padding: 0 78px 0 40px;
@@ -7,9 +9,10 @@
 .projectWraper {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
+  max-width: 1440px;
   justify-content: center;
   gap: 4px;
+  margin: 0 auto;
 }
 
 .projectleftTitle {

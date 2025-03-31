@@ -1,7 +1,11 @@
+.sectionServices {
+  padding-bottom: 64px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .servicesWrapper {
   width: 1248px;
-  height: 1068px;
-  /* border: 1px solid var(--accent-button); */
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10,7 +14,6 @@
 }
 .servicesContent {
   width: 1153px;
-  /* border: 1px solid var(--accent-button); */
   display: flex;
   flex-direction: column;
   gap: 24px;

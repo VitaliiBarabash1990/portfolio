@@ -1,3 +1,8 @@
+.sectionSteps {
+  padding-bottom: 64px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .steps {
   display: flex;
   flex-direction: column;

@@ -6,11 +6,13 @@ import BackgroundHero from '../UI/HidenBackground/BackgroundHero/BackgroundHero'
 
 const Header = () => {
   return (
-    <div className={s.HeaderSection}>
-      <div className={s.HeaderWrapper}>
-        {/* <BackgroundHero /> */}
-        <Navigation />
-        <Hero />
+    <div className={s.headerSection}>
+      <div className={s.headerContainer}>
+        <div className={s.headerWrapper}>
+          {/* <BackgroundHero /> */}
+          <Navigation />
+          <Hero />
+        </div>
       </div>
     </div>
   );

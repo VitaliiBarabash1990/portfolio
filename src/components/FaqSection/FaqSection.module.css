@@ -1,25 +1,27 @@
+.sectionFaq {
+  padding-bottom: 64px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .faqWrapper {
-  /* height: 558px; */
   display: flex;
   flex-direction: row;
   align-items: center;
   position: relative;
-  width: 1248px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .faqQuestionList,
 .faqImage {
   width: 644px;
-  height: 558px;
-  max-height: 558px;
-  /* border: 1px solid var(--accent-button); */
 }
 .faqQuestionList {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+  height: auto;
 }
 .faqImage {
   position: absolute;
