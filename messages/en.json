@@ -197,5 +197,9 @@
   "NotFoundPage": {
     "description": "Please check your browser's address bar or use navigation to go to a familiar page.",
     "title": "Page not found"
+  },
+  "Error": {
+    "description": "<p>Unfortunately a problem has occurred.</p><p>You can try <retry>reloading this page</retry>.</p>",
+    "title": "Something went wrong!"
   }
 }
