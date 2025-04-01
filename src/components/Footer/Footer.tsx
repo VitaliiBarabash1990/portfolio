@@ -69,7 +69,7 @@ export default function Footer() {
     }
   };
   return (
-    <section className={`section ${s.sectionFooter}`}>
+    <section className={`section ${s.sectionFooter} ${s.adWrap}`}>
       <div className="container">
         <div className={s.footerWrapper}>
           <div className={s.footerTitleBlock}>

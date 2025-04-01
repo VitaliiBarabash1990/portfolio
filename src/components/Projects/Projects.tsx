@@ -44,7 +44,10 @@ const Projects = () => {
   };
 
   return (
-    <section id="Projects" className={`section ${s.projectSection}`}>
+    <section
+      id="Projects"
+      className={`section ${s.projectSection} ${s.adWrap}`}
+    >
       <div className={`container ${s.projectContainer}`}>
         <ul className={s.projectWraper}>
           <li className={s.projectleftTitle}>

@@ -183,12 +183,12 @@
   "PageLayout": {
     "links": {
       "docs": {
-        "description": "Learn more about next-intl in the official docs.",
+        "description": "Дізнайтеся більше про next-intl в офіційних документах.",
         "href": "https://next-intl-docs.vercel.app/",
         "title": "Docs"
       },
       "source": {
-        "description": "Browse the source code of this example on GitHub.",
+        "description": "Перегляньте вихідний код цього прикладу на GitHub.",
         "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
         "title": "Source code"
       }

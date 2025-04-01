@@ -43,7 +43,10 @@ const Services = () => {
   ];
 
   return (
-    <section id="Services" className={`section ${s.sectionServices}`}>
+    <section
+      id="Services"
+      className={`section ${s.sectionServices} ${s.adWrap}`}
+    >
       <div className="container">
         <div className={s.servicesWrapper}>
           <ul className={s.servicesContent}>

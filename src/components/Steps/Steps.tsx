@@ -6,7 +6,7 @@ import {useTranslations} from 'next-intl';
 const Steps = () => {
   const t = useTranslations('Steps');
   return (
-    <section id="Steps" className={`section ${s.sectionSteps}`}>
+    <section id="Steps" className={`section ${s.sectionSteps} ${s.adWrap}`}>
       <div className="container">
         <ul className={s.steps}>
           <li className={s.stepsHead}>

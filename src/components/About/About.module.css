@@ -2,6 +2,21 @@
   max-width: 1440px;
   margin: 0 auto;
 }
+@media screen and (min-width: 1440px) {
+  .adWrap {
+    background-image: url('/img/background/About/about_x1.webp');
+  }
+  @media screen and (min-resolution: 2dppx),
+    (min-resolution: 192dpi),
+    (-webkit-min-device-pixel-ratio: 2) {
+    .adWrap {
+      background-image: url('/img/background/About/about_x2.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
 .about {
   display: flex;
   flex-direction: row;

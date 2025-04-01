@@ -1,7 +1,6 @@
 'use client';
 
 import React, {useState} from 'react';
-import SectionLayout from '../SectionLayout/SectionLayout';
 import s from './FaqSection.module.css';
 import {useTranslations} from 'next-intl';
 
@@ -42,7 +41,7 @@ const FaqSection = () => {
   ];
 
   return (
-    <section id="Faq" className={`section ${s.sectionFaq}`}>
+    <section id="Faq" className={`section ${s.sectionFaq} ${s.adWrap}`}>
       <div className="container">
         <div className={s.faqWrapper}>
           <ul className={s.faqQuestionList}>

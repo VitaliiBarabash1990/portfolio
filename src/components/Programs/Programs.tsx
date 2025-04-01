@@ -20,7 +20,10 @@ const ProgramsList = [
 const Programs = () => {
   const t = useTranslations('Programs');
   return (
-    <section id="Programs" className={`section ${s.sectionPrograms}`}>
+    <section
+      id="Programs"
+      className={`section ${s.sectionPrograms} ${s.adWrap}`}
+    >
       <div className={`container`}>
         <ul className={s.programsWrapper}>
           <li className={s.programsHead}>
