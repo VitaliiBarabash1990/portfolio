@@ -6,41 +6,58 @@ import {useTranslations} from 'next-intl';
 const Services = () => {
   const t = useTranslations('Services');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [hundler, setHundler] = useState(false);
+  console.log('Hundler:', hundler);
 
   const handleCollapse = (index: number) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
-  const services = [
+  const Services = [
     {
       id: 0,
       type: t('services.0.type'),
       price: t('services.0.price'),
-      text_short: t('services.0.text_short'),
-      text_long: t('services.0.text_long')
+      text_short_individual: t('services.0.text_short_individual'),
+      text_long_individual: t('services.0.text_long_individual'),
+      text_short_complex: t('services.0.text_short_complex'),
+      text_long_complex: t('services.0.text_long_complex')
     },
     {
       id: 1,
       type: t('services.1.type'),
       price: t('services.1.price'),
-      text_short: t('services.1.text_short'),
-      text_long: t('services.1.text_long')
+      text_short_individual: t('services.1.text_short_individual'),
+      text_long_individual: t('services.1.text_long_individual'),
+      text_short_complex: t('services.0.text_short_complex'),
+      text_long_complex: t('services.0.text_long_complex')
     },
     {
       id: 2,
       type: t('services.2.type'),
       price: t('services.2.price'),
-      text_short: t('services.2.text_short'),
-      text_long: t('services.2.text_long')
+      text_short_individual: t('services.2.text_long_individual'),
+      text_long_individual: t('services.2.text_long_individual'),
+      text_short_complex: t('services.0.text_short_complex'),
+      text_long_complex: t('services.0.text_long_complex')
     },
     {
       id: 3,
       type: t('services.3.type'),
       price: t('services.3.price'),
-      text_short: t('services.3.text_short'),
-      text_long: t('services.3.text_long')
+      text_short_individual: t('services.3.text_short_individual'),
+      text_long_individual: t('services.3.text_long_individual'),
+      text_short_complex: t('services.0.text_short_complex'),
+      text_long_complex: t('services.0.text_long_complex')
     }
   ];
+
+  const handlerIndividual = () => {
+    setHundler(false);
+  };
+  const handlerComplex = () => {
+    setHundler(true);
+  };
 
   return (
     <section
@@ -51,12 +68,28 @@ const Services = () => {
         <div className={s.servicesWrapper}>
           <ul className={s.servicesContent}>
             <li className={s.servicesContentList}>
-              <h4 className={`title ${s.servicesListTypeTitle}`}>
-                {t('typeServices')}
-              </h4>
-              <p className={s.servicesListTypeText}>{t('description')}</p>
+              <button
+                className={
+                  hundler
+                    ? `${s.servicesHundler}`
+                    : `${s.servicesHundlerActive}`
+                }
+                onClick={handlerIndividual}
+              >
+                {t('handler_1')}
+              </button>
+              <button
+                className={
+                  hundler
+                    ? `${s.servicesHundlerActive}`
+                    : `${s.servicesHundler}`
+                }
+                onClick={handlerComplex}
+              >
+                {t('handler_2')}
+              </button>
             </li>
-            {services.map((service, index) => (
+            {Services.map((service, index) => (
               <li key={index} className={s.servicesContentList}>
                 <ul className={s.servicesList}>
                   <li className={s.servicesListItemleft}>
@@ -66,12 +99,32 @@ const Services = () => {
                     <p className={s.servicesPrice}>{service.price}</p>
                   </li>
                   <li className={s.servicesListItemCenter}>
-                    <p className={s.servicesTextShort}>{service.text_short}</p>
+                    <p className={s.servicesTextShort}>
+                      {hundler
+                        ? service.text_short_complex
+                        : service.text_short_individual}
+                    </p>
                     {activeIndex === index && (
                       <>
                         <br />
                         <p className={s.servicesTextShort}>
-                          {service.text_long}
+                          {hundler
+                            ? service.text_long_complex
+                                .split('\n')
+                                .map((line, index) => (
+                                  <React.Fragment key={index}>
+                                    {line}
+                                    <br />
+                                  </React.Fragment>
+                                ))
+                            : service.text_long_individual
+                                .split('\n')
+                                .map((line, index) => (
+                                  <React.Fragment key={index}>
+                                    {line}
+                                    <br />
+                                  </React.Fragment>
+                                ))}
                         </p>
                       </>
                     )}

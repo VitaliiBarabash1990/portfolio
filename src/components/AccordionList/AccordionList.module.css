@@ -61,7 +61,7 @@
     padding 0.3s ease-out;
   position: absolute;
   width: 100%;
-  background: var(--background);
+  background: transparent;
   z-index: 10;
 }
 

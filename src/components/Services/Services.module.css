@@ -40,17 +40,22 @@
   display: flex;
   align-items: baseline;
 }
-.servicesListTypeTitle {
+.servicesHundlerActive {
+  font-family: var(--second-family);
+  font-weight: 300;
   font-size: 20px;
   color: var(--amiora-color-2);
   border-bottom: 1px solid var(--amiora-color-2);
   height: 48px;
   margin-right: 112px;
 }
-.servicesListTypeText {
+.servicesHundler {
+  font-family: var(--second-family);
+  font-weight: 300;
   font-size: 20px;
   color: var(--color-s);
   line-height: 100%;
+  margin-right: 112px;
 }
 .servicesTitleBlock {
   width: 39px;

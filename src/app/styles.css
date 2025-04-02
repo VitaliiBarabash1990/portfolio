@@ -20,7 +20,9 @@
   --white: #fff;
   --black: #000;
   --background: #000205;
-  --background-tech: #0f0f0f;
+
+  /* --background-tech: #0f0f0f; */
+  --background-tech: rgba(15, 15, 15, 0.5);
   --border-form: #323335;
   --background-form: #0f0f0f;
   --color-p: #fafafa;
