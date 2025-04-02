@@ -64,7 +64,15 @@
 .prevButton {
   left: -60px;
 }
+.prevButtonProject {
+  top: 835px;
+  left: 40px;
+}
 
 .nextButton {
   right: -60px;
+}
+.nextButtonProject {
+  top: 835px;
+  right: 40px;
 }

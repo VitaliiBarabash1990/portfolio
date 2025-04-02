@@ -19,6 +19,18 @@ const Projects = () => {
       image: '/img/projects/project_1_x1.webp',
       image_x2:
         '/img/projects/project_1_x1.webp 1x, /img/projects/project_1_x2.webp 2x',
+      image_project_x1: [
+        '/img/projects/project_1.1_x1.webp',
+        '/img/projects/project_1.2_x1.webp',
+        '/img/projects/project_1.3_x1.webp',
+        '/img/projects/project_1.4_x1.webp'
+      ],
+      image_project_x2: [
+        '/img/projects/project_1.1_x1.webp 1x, /img/projects/project_1.1_x2.webp 2x',
+        '/img/projects/project_1.2_x1.webp 1x, /img/projects/project_1.2_x2.webp 2x',
+        '/img/projects/project_1.3_x1.webp 1x, /img/projects/project_1.3_x2.webp 2x',
+        '/img/projects/project_1.4_x1.webp 1x, /img/projects/project_1.4_x2.webp 2x'
+      ],
       href: 'https://kolibry-studio-product-version.vercel.app/ua',
       technology: ['Next.js', 'Redux', 'JavaScript', 'HTML', 'CSS']
     },
@@ -31,6 +43,18 @@ const Projects = () => {
       image: '/img/projects/project_2_x1.webp',
       image_x2:
         '/img/projects/project_2_x1.webp 1x, /img/projects/project_2_x2.webp 2x',
+      image_project_x1: [
+        '/img/projects/project_2.4_x1.webp',
+        '/img/projects/project_2.1_x1.webp',
+        '/img/projects/project_2.2_x1.webp',
+        '/img/projects/project_2.3_x1.webp'
+      ],
+      image_project_x2: [
+        '/img/projects/project_2.4_x1.webp 1x, /img/projects/project_2.4_x2.webp 2x',
+        '/img/projects/project_2.1_x1.webp 1x, /img/projects/project_2.1_x2.webp 2x',
+        '/img/projects/project_2.2_x1.webp 1x, /img/projects/project_2.2_x2.webp 2x',
+        '/img/projects/project_2.3_x1.webp 1x, /img/projects/project_2.3_x2.webp 2x'
+      ],
       href: 'https://ventilation-system.vercel.app/',
       technology: ['Next.js', 'Redux', 'JavaScript', 'HTML', 'CSS']
     }
@@ -44,36 +68,58 @@ const Projects = () => {
   };
 
   return (
-    <section
-      id="Projects"
-      className={`section ${s.projectSection} ${s.adWrap}`}
-    >
-      <div className={`container ${s.projectContainer}`}>
+    <section id="Projects" className={`section ${s.projectSection}`}>
+      <div
+        className={
+          short
+            ? `container ${s.projectContainer}`
+            : `container ${s.projectContainerSwipe}`
+        }
+      >
         <ul className={s.projectWraper}>
-          <li className={s.projectleftTitle}>
+          <li className={short ? `${s.projectleftTitle}` : `${s.displayNone}`}>
             <div className={s.projectleftTitleRotate}>
               <div className={s.fadingLine}></div>
               <h3 className={`title ${s.projectTitle}`}>{t('title')}</h3>
             </div>
           </li>
           <li className={s.projectRightSwiper}>
-            <ul className={s.projectSwiperList}>
-              <li className={s.projectSwiperItem}>
-                <h4 className={`title ${s.swiperNumberTitle}`}>
+            <ul
+              className={
+                short ? `${s.projectSwiperList}` : `${s.projectSwiperListShort}`
+              }
+            >
+              <li className={`${s.projectSwiperItem} ${s.projectTopClose}`}>
+                <h4
+                  className={
+                    short ? `title ${s.swiperNumberTitle}` : `visually-hidden`
+                  }
+                >
                   {`0` + `${activeProject.id}`}
                 </h4>
+                {!short && (
+                  <button className={s.projectBtnClose} onClick={handleClick}>
+                    <svg className={s.projectClose}>
+                      <use href="/symbol-defs.svg#icon-close"></use>
+                    </svg>
+                  </button>
+                )}
               </li>
               <li className={s.projectSwiperItem}>
                 <CustomSwiper
+                  activeProject={activeProject}
                   setActiveProject={setActiveProject}
                   projects={projectText}
+                  isShort={short}
                 />
               </li>
               <li className={s.projectSwiperItem}>
-                <h5 className={`title ${s.swiperNameTitle}`}>
-                  {activeProject.name}
-                </h5>
-                <p className={s.swiperText}>
+                {short && (
+                  <h5 className={`title ${s.swiperNameTitle}`}>
+                    {activeProject.name}
+                  </h5>
+                )}
+                <p className={short ? `${s.swiperText}` : `${s.swiperTextTop}`}>
                   {short
                     ? activeProject.text_short
                     : activeProject.text_long.split('\n').map((line, index) => (
@@ -83,43 +129,45 @@ const Projects = () => {
                         </React.Fragment>
                       ))}
                 </p>
-                <div className={s.swiperTypeWraper}>
-                  <h5 className={`title ${s.swiperTypeTitle}`}>
-                    {activeProject.type}
-                  </h5>
-                  <button className={s.swiperBtn} onClick={handleClick}>
-                    {short ? t('button_1') : t('button_2')}
-                    <svg
-                      className={
-                        short
-                          ? `${s.swiperIcon}`
-                          : `${s.swiperIcon} ${s.swiperIconTop}`
-                      }
+                {short && (
+                  <div className={s.swiperTypeWraper}>
+                    <h5 className={`title ${s.swiperTypeTitle}`}>
+                      {activeProject.type}
+                    </h5>
+                    <button className={s.swiperBtn} onClick={handleClick}>
+                      {short ? t('button_1') : t('button_2')}
+                      <svg className={s.swiperIcon}>
+                        <use href="/symbol-defs.svg#icon-arrow-bottom-left"></use>
+                      </svg>
+                    </button>
+                  </div>
+                )}
+              </li>
+              {short && (
+                <>
+                  <li
+                    className={`${s.projectSwiperItem} ${s.projectSwiperItemSeparator}`}
+                  ></li>
+                  <li
+                    className={`${s.projectSwiperItem} ${s.projectSwiperSkils}`}
+                  >
+                    <ul className={s.swiperSkilsList}>
+                      {activeProject.technology.map((tech, index) => (
+                        <li key={index} className={s.swiperSkilsItem}>
+                          {tech}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      className={s.swiperLink}
+                      href={activeProject.href}
+                      target="_blank"
                     >
-                      <use href="/symbol-defs.svg#icon-arrow-bottom-left"></use>
-                    </svg>
-                  </button>
-                </div>
-              </li>
-              <li
-                className={`${s.projectSwiperItem} ${s.projectSwiperItemSeparator}`}
-              ></li>
-              <li className={`${s.projectSwiperItem} ${s.projectSwiperSkils}`}>
-                <ul className={s.swiperSkilsList}>
-                  {activeProject.technology.map((tech, index) => (
-                    <li key={index} className={s.swiperSkilsItem}>
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  className={s.swiperLink}
-                  href={activeProject.href}
-                  target="_blank"
-                >
-                  {t('button_3')}
-                </Link>
-              </li>
+                      {t('button_3')}
+                    </Link>
+                  </li>
+                </>
+              )}
             </ul>
           </li>
         </ul>

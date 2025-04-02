@@ -3,23 +3,11 @@
   max-width: 1440px;
   margin: 0 auto;
 }
-@media screen and (min-width: 1440px) {
-  .adWrap {
-    background-image: url('/img/background/Projects/projects_x1.webp');
-  }
-  @media screen and (min-resolution: 2dppx),
-    (min-resolution: 192dpi),
-    (-webkit-min-device-pixel-ratio: 2) {
-    .adWrap {
-      background-image: url('/img/background/Projects/projects_x2.webp');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
-}
 .projectContainer {
   padding: 0 78px 0 40px;
+}
+.projectContainerSwipe {
+  padding: 0;
 }
 .projectWraper {
   display: flex;
@@ -29,12 +17,14 @@
   gap: 4px;
   margin: 0 auto;
 }
-
 .projectleftTitle {
   /* border: 1px solid var(--accent-button); */
   width: 34px;
   height: 1209px;
   position: relative;
+}
+.displayNone {
+  display: none;
 }
 .projectleftTitleRotate {
   position: absolute;
@@ -85,6 +75,32 @@
   align-items: flex-start;
   gap: 24px;
 }
+.projectTopClose {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  height: 52px;
+}
+.projectBtnClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 40px;
+  height: 40px;
+}
+.projectClose {
+  width: 22px;
+  height: 22px;
+  fill: var(--amiora-color-1);
+  transform: scale(1);
+  transition: transform 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.projectBtnClose:hover .projectClose {
+  fill: var(--accent-button);
+  transform: scale(1.04);
+  transition: transform 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
 .swiperNumberTitle {
   font-family: var(--font-family);
   font-weight: 400;
@@ -102,6 +118,10 @@
   font-family: var(--font-family);
   font-size: 18px;
   color: var(--amiora-color-2);
+}
+.swiperTextTop {
+  margin-top: 80px;
+  padding: 20px 40px;
 }
 .swiperTypeWraper {
   width: 100%;
@@ -141,12 +161,18 @@
 .swiperBtn:hover .swiperIcon {
   fill: var(--accent-button);
 }
-.projectSwiperList {
+.projectSwiperList,
+.projectSwiperListShort {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding: 0 80px;
   width: 100%;
+}
+.projectSwiperList {
+  padding: 0 80px;
+}
+.projectSwiperListShort {
+  padding: 0;
 }
 .projectSwiperItemSeparator {
   border-top: 1px solid var(--amiora-color-1);

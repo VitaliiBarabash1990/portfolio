@@ -10,11 +10,18 @@ import s from './CustomSwiper.module.css';
 import {Project} from '@/types/types';
 
 type Props = {
+  activeProject: Project;
   setActiveProject: (project: Project) => void;
   projects: Project[];
+  isShort: boolean;
 };
 
-const CustomSwiper = ({setActiveProject, projects}: Props) => {
+const CustomSwiper = ({
+  activeProject,
+  setActiveProject,
+  projects,
+  isShort
+}: Props) => {
   return (
     <div className={s.sliderContainer}>
       <Swiper
@@ -28,7 +35,9 @@ const CustomSwiper = ({setActiveProject, projects}: Props) => {
         modules={[Navigation]}
         loop={true}
         onSlideChange={(swiper) => {
-          setActiveProject(projects[swiper.realIndex]); // Передаємо активний проект
+          if (isShort && projects[swiper.realIndex]) {
+            setActiveProject(projects[swiper.realIndex]);
+          }
         }}
         breakpoints={{
           320: {slidesPerView: 1, spaceBetween: 0},
@@ -36,28 +45,60 @@ const CustomSwiper = ({setActiveProject, projects}: Props) => {
           1280: {slidesPerView: 1, spaceBetween: 0}
         }}
       >
-        {projects.map((project) => {
-          return (
-            <SwiperSlide key={project.id} className={s.slide}>
-              <div className={s.reviewCard}>
-                <div className={s.reviews_client_overflov}>
-                  <picture className={s.aboutMePhotoPicture}>
-                    <source srcSet={project.image} type="image/webp" />
-                    <img src={project.image_x2} alt="Мій проект" />
-                  </picture>
-                </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
+        {isShort
+          ? projects.map((project) => {
+              return (
+                <SwiperSlide key={project.id} className={s.slide}>
+                  <div className={s.reviewCard}>
+                    <div className={s.reviews_client_overflov}>
+                      <picture className={s.aboutMePhotoPicture}>
+                        <source srcSet={project.image} type="image/webp" />
+                        <img src={project.image_x2} alt="Мій проект" />
+                      </picture>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })
+          : activeProject.image_project_x1.map((img, index) => {
+              return (
+                <SwiperSlide key={index} className={s.slide}>
+                  <div className={s.reviewCard}>
+                    <div className={s.reviews_client_overflov}>
+                      <picture className={s.aboutMePhotoPicture}>
+                        <source srcSet={img} type="image/webp" />
+                        <img
+                          src={activeProject.image_project_x2[index]}
+                          alt="Мій проект"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
       </Swiper>
 
-      <button className={`custom-prev ${s.navButton} ${s.prevButton}`}>
+      <button
+        // className={`custom-prev ${s.navButton} ${s.prevButton} ${s.prevButtonProject}`}
+        className={
+          isShort
+            ? `custom-prev ${s.navButton} ${s.prevButton}`
+            : `custom-prev ${s.navButton} ${s.prevButtonProject}`
+        }
+      >
         <svg className={`${s.navButton_icon}`}>
           <use href="/symbol-defs.svg#icon-left-swiper"></use>
         </svg>
       </button>
-      <button className={`custom-next ${s.navButton} ${s.nextButton}`}>
+      <button
+        // className={`custom-next ${s.navButton} ${s.nextButton} ${s.nextButtonProject}`}
+        className={
+          isShort
+            ? `custom-next ${s.navButton} ${s.nextButton}`
+            : `custom-next ${s.navButton} ${s.nextButtonProject}`
+        }
+      >
         <svg className={`${s.navButton_icon} ${s.right}`}>
           <use href="/symbol-defs.svg#icon-left-swiper"></use>
         </svg>
