@@ -1,11 +1,23 @@
-import React from 'react';
+'use client';
+import React, {useEffect, useState} from 'react';
 import s from './About.module.css';
 import {useTranslations} from 'next-intl';
 
 const About = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const t = useTranslations('About');
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 10);
+  }, []);
+
   return (
-    <section id="About" className={`section ${s.sectionAbout} ${s.adWrap}`}>
+    <section
+      id="About"
+      className={`section ${s.sectionAbout} ${s.adWrap} ${isLoaded ? s.lazyLoaded : ''}`}
+    >
       <div className={`container`}>
         <ul className={s.about}>
           <li className={s.aboutMe}>

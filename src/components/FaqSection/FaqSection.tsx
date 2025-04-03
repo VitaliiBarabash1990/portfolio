@@ -1,12 +1,19 @@
 'use client';
 
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import s from './FaqSection.module.css';
 import {useTranslations} from 'next-intl';
 
 const FaqSection = () => {
   const t = useTranslations('Faq');
   const [activeIndex, setActiveIndex] = useState<null | number>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 10);
+  }, []);
 
   const handleClick = (index: number) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -41,7 +48,10 @@ const FaqSection = () => {
   ];
 
   return (
-    <section id="Faq" className={`section ${s.sectionFaq} ${s.adWrap}`}>
+    <section
+      id="Faq"
+      className={`section ${s.sectionFaq} ${s.adWrap} ${isLoaded ? s.lazyLoaded : ''}`}
+    >
       <div className="container">
         <div className={s.faqWrapper}>
           <ul className={s.faqQuestionList}>

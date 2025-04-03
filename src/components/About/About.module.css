@@ -2,14 +2,21 @@
   max-width: 1440px;
   margin: 0 auto;
 }
+.adWrap {
+  background-color: transparent;
+}
+.adWrap.lazyLoaded {
+  background-image: url('/img/background/About/about_x1.jpg');
+}
+
 @media screen and (min-width: 1440px) {
-  .adWrap {
+  .adWrap.lazyLoaded {
     background-image: url('/img/background/About/about_x1.jpg');
   }
   @media screen and (min-resolution: 2dppx),
     (min-resolution: 192dpi),
     (-webkit-min-device-pixel-ratio: 2) {
-    .adWrap {
+    .adWrap.lazyLoaded {
       background-image: url('/img/background/About/about_x2.jpg');
       background-size: cover;
       background-position: center;

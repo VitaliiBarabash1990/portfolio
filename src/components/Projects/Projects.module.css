@@ -18,7 +18,6 @@
   margin: 0 auto;
 }
 .projectleftTitle {
-  /* border: 1px solid var(--accent-button); */
   width: 34px;
   height: 1209px;
   position: relative;
@@ -33,7 +32,6 @@
   display: flex;
   align-items: center;
   gap: 40px;
-  /* border: 1px solid var(--accent-button); */
   width: 1209px;
   height: 34px;
   transform: rotate(270deg);
@@ -45,7 +43,6 @@
 }
 
 .projectRightSwiper {
-  /* border: 1px solid var(--accent-button); */
   width: 1284px;
   height: auto;
 }
@@ -66,7 +63,6 @@
   gap: 40px;
 }
 .projectSwiperItem {
-  /* border: 1px solid var(--accent-button); */
   text-align: left;
 }
 .projectSwiperItem {

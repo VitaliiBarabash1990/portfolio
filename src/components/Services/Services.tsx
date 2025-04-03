@@ -1,5 +1,5 @@
 'use client';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import s from './Services.module.css';
 import {useTranslations} from 'next-intl';
 
@@ -7,7 +7,13 @@ const Services = () => {
   const t = useTranslations('Services');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [hundler, setHundler] = useState(false);
-  console.log('Hundler:', hundler);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 10);
+  }, []);
 
   const handleCollapse = (index: number) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -62,7 +68,7 @@ const Services = () => {
   return (
     <section
       id="Services"
-      className={`section ${s.sectionServices} ${s.adWrap}`}
+      className={`section ${s.sectionServices} ${s.adWrap} ${isLoaded ? s.lazyLoaded : ''}`}
     >
       <div className="container">
         <div className={s.servicesWrapper}>

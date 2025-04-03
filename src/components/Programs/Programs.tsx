@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, {useEffect, useState} from 'react';
 import s from './Programs.module.css';
 import {useTranslations} from 'next-intl';
 
@@ -18,11 +20,19 @@ const ProgramsList = [
 ];
 
 const Programs = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const t = useTranslations('Programs');
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 10);
+  }, []);
+
   return (
     <section
       id="Programs"
-      className={`section ${s.sectionPrograms} ${s.adWrap}`}
+      className={`section ${s.sectionPrograms} ${s.adWrap} ${isLoaded ? s.lazyLoaded : ''}`}
     >
       <div className={`container`}>
         <ul className={s.programsWrapper}>

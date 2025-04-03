@@ -5,6 +5,7 @@ import s from './Footer.module.css';
 import {ErrorMessage, Field, Form, Formik, FormikHelpers} from 'formik';
 import * as Yup from 'yup';
 import toast, {Toaster} from 'react-hot-toast';
+import {useEffect, useState} from 'react';
 
 interface FormValues {
   name: string;
@@ -13,7 +14,14 @@ interface FormValues {
 }
 
 export default function Footer() {
+  const [isLoaded, setIsLoaded] = useState(false);
   const t = useTranslations('Footer');
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 10);
+  }, []);
 
   const initialValues: FormValues = {
     name: '',
@@ -69,7 +77,9 @@ export default function Footer() {
     }
   };
   return (
-    <section className={`section ${s.sectionFooter} ${s.adWrap}`}>
+    <section
+      className={`section ${s.sectionFooter} ${s.adWrap} ${isLoaded ? s.lazyLoaded : ''}`}
+    >
       <div className="container">
         <div className={s.footerWrapper}>
           <div className={s.footerTitleBlock}>
