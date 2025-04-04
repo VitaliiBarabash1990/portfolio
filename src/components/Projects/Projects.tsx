@@ -16,20 +16,20 @@ const Projects = () => {
       text_short: t('text_short.0'),
       text_long: t('text_long.0'),
       type: t('type.0'),
-      image: '/img/projects/project_1_x1.webp',
+      image: '/img/projects/project_1_x1.jpg',
       image_x2:
-        '/img/projects/project_1_x1.webp 1x, /img/projects/project_1_x2.webp 2x',
+        '/img/projects/project_1_x1.jpg 1x, /img/projects/project_1_x2.jpg 2x',
       image_project_x1: [
-        '/img/projects/project_1.1_x1.webp',
-        '/img/projects/project_1.2_x1.webp',
-        '/img/projects/project_1.3_x1.webp',
-        '/img/projects/project_1.4_x1.webp'
+        '/img/projects/project_1.1_x1.jpg',
+        '/img/projects/project_1.2_x1.jpg',
+        '/img/projects/project_1.3_x1.jpg',
+        '/img/projects/project_1.4_x1.jpg'
       ],
       image_project_x2: [
-        '/img/projects/project_1.1_x1.webp 1x, /img/projects/project_1.1_x2.webp 2x',
-        '/img/projects/project_1.2_x1.webp 1x, /img/projects/project_1.2_x2.webp 2x',
-        '/img/projects/project_1.3_x1.webp 1x, /img/projects/project_1.3_x2.webp 2x',
-        '/img/projects/project_1.4_x1.webp 1x, /img/projects/project_1.4_x2.webp 2x'
+        '/img/projects/project_1.1_x1.jpg 1x, /img/projects/project_1.1_x2.jpg 2x',
+        '/img/projects/project_1.2_x1.jpg 1x, /img/projects/project_1.2_x2.jpg 2x',
+        '/img/projects/project_1.3_x1.jpg 1x, /img/projects/project_1.3_x2.jpg 2x',
+        '/img/projects/project_1.4_x1.jpg 1x, /img/projects/project_1.4_x2.jpg 2x'
       ],
       href: 'https://kolibry-studio-product-version.vercel.app/ua',
       technology: ['Next.js', 'Redux', 'JavaScript', 'HTML', 'CSS']
@@ -40,20 +40,20 @@ const Projects = () => {
       text_short: t('text_short.1'),
       text_long: t('text_long.1'),
       type: t('type.0'),
-      image: '/img/projects/project_2_x1.webp',
+      image: '/img/projects/project_2_x1.jpg',
       image_x2:
-        '/img/projects/project_2_x1.webp 1x, /img/projects/project_2_x2.webp 2x',
+        '/img/projects/project_2_x1.jpg 1x, /img/projects/project_2_x2.jpg 2x',
       image_project_x1: [
-        '/img/projects/project_2.4_x1.webp',
-        '/img/projects/project_2.1_x1.webp',
-        '/img/projects/project_2.2_x1.webp',
-        '/img/projects/project_2.3_x1.webp'
+        '/img/projects/project_2.4_x1.jpg',
+        '/img/projects/project_2.1_x1.jpg',
+        '/img/projects/project_2.2_x1.jpg',
+        '/img/projects/project_2.3_x1.jpg'
       ],
       image_project_x2: [
-        '/img/projects/project_2.4_x1.webp 1x, /img/projects/project_2.4_x2.webp 2x',
-        '/img/projects/project_2.1_x1.webp 1x, /img/projects/project_2.1_x2.webp 2x',
-        '/img/projects/project_2.2_x1.webp 1x, /img/projects/project_2.2_x2.webp 2x',
-        '/img/projects/project_2.3_x1.webp 1x, /img/projects/project_2.3_x2.webp 2x'
+        '/img/projects/project_2.4_x1.jpg 1x, /img/projects/project_2.4_x2.jpg 2x',
+        '/img/projects/project_2.1_x1.jpg 1x, /img/projects/project_2.1_x2.jpg 2x',
+        '/img/projects/project_2.2_x1.jpg 1x, /img/projects/project_2.2_x2.jpg 2x',
+        '/img/projects/project_2.3_x1.jpg 1x, /img/projects/project_2.3_x2.jpg 2x'
       ],
       href: 'https://ventilation-system.vercel.app/',
       technology: ['Next.js', 'Redux', 'JavaScript', 'HTML', 'CSS']

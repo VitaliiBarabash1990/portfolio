@@ -3,14 +3,16 @@
     "description_1": "Hello, my name is Vitalii and I am",
     "description_2": "I develop fast and reliable web applications that solve real tasks. Clean code, optimized performance, and flawless user experience are my top priorities.",
     "title": "FULLSTACK DEVELOPER",
-    "button": "Discuss the project"
+    "button": "Talk about project",
+    "toProjects": "To the projects"
   },
   "Navigation": {
     "about": "About me",
     "projects": "Projects",
     "price": "Services and prices",
     "steps": "Stages of cooperation",
-    "toProjects": "To the projects"
+    "toProjects": "To the projects",
+    "button": "Talk about project"
   },
   "About": {
     "about": "About me",

@@ -78,6 +78,7 @@ export default function Footer() {
   };
   return (
     <section
+      id="Contacts"
       className={`section ${s.sectionFooter} ${s.adWrap} ${isLoaded ? s.lazyLoaded : ''}`}
     >
       <div className="container">

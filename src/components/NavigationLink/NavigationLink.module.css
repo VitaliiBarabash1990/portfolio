@@ -12,7 +12,13 @@
 .navLink {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 54px;
+  justify-content: center;
+  gap: 20px;
   height: 40px;
+}
+@media screen and (min-width: 768px) {
+  .navLink {
+    justify-content: flex-end;
+    gap: 54px;
+  }
 }

@@ -9,23 +9,7 @@ import {useEffect, useState} from 'react';
 // import {NavigationMob} from '../NavigationMob/NavigationMob';
 
 export default function Navigation() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const t = useTranslations('Navigation');
-  const isModal = true;
-
-  useEffect(() => {
-    if (menuOpen) {
-      document.body.classList.add('no-scroll');
-      document.documentElement.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-      document.documentElement.classList.remove('no-scroll');
-    }
-    return () => {
-      document.body.classList.remove('no-scroll');
-      document.documentElement.classList.remove('no-scroll');
-    };
-  }, [menuOpen]);
 
   return (
     <div className={s.navigation}>
@@ -123,15 +107,8 @@ export default function Navigation() {
           <div className={s.local__switcher_mob}>
             <Switcher />
           </div>
-          <div className={s.headerBurgerButton}>
-            <BurgerButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-          </div>
         </div>
       </nav>
-
-      <div className={`${s.menu_burger} ${menuOpen ? s.open : ''}`}>
-        {/* <NavigationMob isModal={isModal} setMenuOpen={setMenuOpen} /> */}
-      </div>
     </div>
   );
 }

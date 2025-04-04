@@ -7,11 +7,16 @@
 }
 .adWrap.lazyLoaded {
   background-image: url('/img/background/About/about_x1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 375px) {
   .adWrap.lazyLoaded {
     background-image: url('/img/background/About/about_x1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   @media screen and (min-resolution: 2dppx),
     (min-resolution: 192dpi),
@@ -26,55 +31,27 @@
 }
 .about {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   position: relative;
   margin: 0 auto;
-}
-.aboutMe,
-.aboutMePhoto {
-  width: 632px;
-  height: 589px;
-}
-.aboutMe {
-  display: flex;
-  flex-direction: column;
   gap: 56px;
-}
-.aboutMePhoto {
-  position: absolute;
-  right: -96px;
-}
-.aboutMePhotoPicture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.aboutMeShadow {
-  position: absolute;
-  width: 632px;
-  height: 589px;
-  background: linear-gradient(180deg, rgba(0, 2, 5, 0) 85.5%, #000205 100%);
-  transform: rotate(0deg);
-  z-index: 1;
 }
 .aboutMeHead {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  justify-content: flex-start;
+  gap: 20px;
   height: 39px;
 }
 .aboutMeTitle {
   color: var(--accent-button);
-  font-size: 28px;
+  font-size: 18px;
   white-space: nowrap;
 }
 .fadingLine {
-  width: 451px;
+  width: 215px;
   height: 2px;
   background: linear-gradient(
     to right,
@@ -82,12 +59,24 @@
     rgba(255, 255, 255, 0) 100%
   );
 }
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+.aboutMeText {
+  font-size: 13px;
+  line-height: 170%;
+  color: var(--color-p);
+}
 .downloadBtn {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 24px;
-  min-width: 362px;
+  width: 327px;
+  padding: 12px 40px 12px 48px;
+  font-size: 14px;
   white-space: nowrap;
   color: var(--white);
   border-color: var(--white);
@@ -104,7 +93,89 @@
   fill: var(--accent-button);
 }
 .iconFile {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   fill: var(--white);
+}
+.aboutMePhoto {
+  position: relative;
+}
+.aboutMeShadow {
+  position: absolute;
+  min-width: 300px;
+  width: 100%;
+  aspect-ratio: 4 / 3.75;
+  background: linear-gradient(180deg, rgba(0, 2, 5, 0) 85.5%, #000205 100%);
+  transform: rotate(0deg);
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .aboutMeHead {
+    gap: 40px;
+  }
+  .fadingLine {
+    width: 514px;
+  }
+  .aboutMeTitle {
+    font-size: 20px;
+  }
+  .aboutMeText {
+    font-size: 16px;
+  }
+  .downloadBtn {
+    font-size: 16px;
+  }
+  .iconFile {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 auto;
+  }
+  .aboutMe,
+  .aboutMePhoto {
+    width: 632px;
+    height: 589px;
+  }
+  .aboutMePhoto {
+    position: absolute;
+    right: -46px;
+  }
+  .aboutMeShadow {
+    position: absolute;
+    width: 632px;
+    height: 589px;
+    background: linear-gradient(180deg, rgba(0, 2, 5, 0) 85.5%, #000205 100%);
+    transform: rotate(0deg);
+    z-index: 1;
+  }
+  .aboutMePhotoPicture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .fadingLine {
+    width: 451px;
+  }
+  .aboutMeTitle {
+    font-size: 28px;
+  }
+  .downloadBtn {
+    min-width: 362px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .aboutMePhoto {
+    right: -96px;
+  }
 }
