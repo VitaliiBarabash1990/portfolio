@@ -42,25 +42,51 @@ export default function AccordionList() {
       text: t('steps.5.text')
     }
   ];
+
+  const stepsSorted = steps.sort((a, b) => a.number - b.number);
+
+  const leftColumn = stepsSorted.filter((step) => step.number <= 3);
+  const rightColumn = stepsSorted.filter((step) => step.number > 3);
   return (
     <Accordion type="single" collapsible className={s.accordionWrapper}>
-      {steps.map((step) => (
-        <AccordionItem
-          key={step.number}
-          value={`step-${step.number}`}
-          className={s.accordionItem}
-        >
-          <AccordionTrigger className={s.accordionTrigger}>
-            <div className={s.accordionTriggerBtn}>
-              <span className={s.stepNumber}>{step.number}</span>
-              <h4 className={`title ${s.accordionTitle}`}>{step.title}</h4>
-            </div>
-          </AccordionTrigger>
-          <AccordionContent className={s.accordionContent}>
-            <p className={s.accordionContentText}>{step.text}</p>
-          </AccordionContent>
-        </AccordionItem>
-      ))}
+      <div className={s.column}>
+        {leftColumn.map((step) => (
+          <AccordionItem
+            key={step.number}
+            value={`step-${step.number}`}
+            className={s.accordionItem}
+          >
+            <AccordionTrigger className={s.accordionTrigger}>
+              <div className={s.accordionTriggerBtn}>
+                <span className={s.stepNumber}>{step.number}</span>
+                <h4 className={`title ${s.accordionTitle}`}>{step.title}</h4>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className={s.accordionContent}>
+              <p className={s.accordionContentText}>{step.text}</p>
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </div>
+      <div className={s.column}>
+        {rightColumn.map((step) => (
+          <AccordionItem
+            key={step.number}
+            value={`step-${step.number}`}
+            className={s.accordionItem}
+          >
+            <AccordionTrigger className={s.accordionTrigger}>
+              <div className={s.accordionTriggerBtn}>
+                <span className={s.stepNumber}>{step.number}</span>
+                <h4 className={`title ${s.accordionTitle}`}>{step.title}</h4>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className={s.accordionContent}>
+              <p className={s.accordionContentText}>{step.text}</p>
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </div>
     </Accordion>
   );
 }

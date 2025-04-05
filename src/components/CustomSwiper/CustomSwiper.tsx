@@ -79,30 +79,30 @@ const CustomSwiper = ({
             })}
       </Swiper>
 
-      <button
-        // className={`custom-prev ${s.navButton} ${s.prevButton} ${s.prevButtonProject}`}
-        className={
-          isShort
-            ? `custom-prev ${s.navButton} ${s.prevButton}`
-            : `custom-prev ${s.navButton} ${s.prevButtonProject}`
-        }
-      >
-        <svg className={`${s.navButton_icon}`}>
-          <use href="/symbol-defs.svg#icon-left-swiper"></use>
-        </svg>
-      </button>
-      <button
-        // className={`custom-next ${s.navButton} ${s.nextButton} ${s.nextButtonProject}`}
-        className={
-          isShort
-            ? `custom-next ${s.navButton} ${s.nextButton}`
-            : `custom-next ${s.navButton} ${s.nextButtonProject}`
-        }
-      >
-        <svg className={`${s.navButton_icon} ${s.right}`}>
-          <use href="/symbol-defs.svg#icon-left-swiper"></use>
-        </svg>
-      </button>
+      <div className={isShort ? s.swiperArowWraper : s.swiperArowWraperShort}>
+        <button
+          className={
+            isShort
+              ? `custom-prev ${s.navButton} ${s.prevButton}`
+              : `custom-prev ${s.navButton} ${s.prevButtonProject}`
+          }
+        >
+          <svg className={`${s.navButton_icon}`}>
+            <use href="/symbol-defs.svg#icon-left-swiper"></use>
+          </svg>
+        </button>
+        <button
+          className={
+            isShort
+              ? `custom-next ${s.navButton} ${s.nextButton}`
+              : `custom-next ${s.navButton} ${s.nextButtonProject}`
+          }
+        >
+          <svg className={`${s.navButton_icon} ${s.right}`}>
+            <use href="/symbol-defs.svg#icon-left-swiper"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   );
 };
