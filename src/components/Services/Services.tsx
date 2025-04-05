@@ -103,6 +103,26 @@ const Services = () => {
                       {service.type}
                     </h4>
                     <p className={s.servicesPrice}>{service.price}</p>
+                    <button
+                      className={s.servicesTabBtn}
+                      onClick={() => handleCollapse(index)}
+                    >
+                      {activeIndex !== index ? (
+                        <>
+                          {t('button_1')}{' '}
+                          <svg className={s.serviceIconTab}>
+                            <use href="/symbol-defs.svg#icon-arrow_bottom"></use>
+                          </svg>
+                        </>
+                      ) : (
+                        <>
+                          {t('button_2')}{' '}
+                          <svg className={s.serviceIconReverseTab}>
+                            <use href="/symbol-defs.svg#icon-arrow_bottom"></use>
+                          </svg>
+                        </>
+                      )}
+                    </button>
                   </li>
                   <li className={s.servicesListItemCenter}>
                     <p className={s.servicesTextShort}>

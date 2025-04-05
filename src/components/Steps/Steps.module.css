@@ -9,10 +9,17 @@
 }
 .adWrap.lazyLoaded {
   background-image: url('/img/background/Steps/steps_x1.jpg');
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 @media screen and (min-width: 1440px) {
   .adWrap.lazyLoaded {
     background-image: url('/img/background/Steps/steps_x1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   @media screen and (min-resolution: 2dppx),
     (min-resolution: 192dpi),
@@ -71,7 +78,8 @@
 
 @media screen and (min-width: 1280px) {
   .sectionSteps {
-    padding: 64px 0;
+    padding-top: 104px;
+    padding-bottom: 64px;
   }
   .steps {
     gap: 64px;

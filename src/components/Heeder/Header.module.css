@@ -58,16 +58,17 @@
 }
 .adWrap.lazyLoaded {
   background-image: url('/img/background/Hero/heroScreen_x1.jpg');
+  min-width: 100%;
   background-repeat: no-repeat;
-  background-size: cover; /* додаємо! */
-  background-position: center; /* бажано */
+  background-size: cover;
+  background-position: center;
 }
 @media screen and (min-width: 375px) {
   .adWrap.lazyLoaded {
     background-image: url('/img/background/Hero/heroScreen_x1.jpg');
     background-repeat: no-repeat;
-    background-size: cover; /* додаємо! */
-    background-position: center; /* бажано */
+    background-size: cover;
+    background-position: center;
   }
 
   @media screen and (min-resolution: 2dppx),

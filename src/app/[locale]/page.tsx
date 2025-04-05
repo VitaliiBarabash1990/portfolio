@@ -18,14 +18,14 @@ export default function IndexPage({params: {locale}}: Props) {
 
   return (
     <>
-      <Header />
+      {/* <Header />
       <About />
       <Programs />
       <Projects />
-      <Steps />
+      <Steps /> */}
       <Services />
-      <FaqSection />
-      <Footer />
+      {/* <FaqSection />
+      <Footer /> */}
     </>
   );
 }
