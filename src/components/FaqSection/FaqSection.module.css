@@ -1,5 +1,5 @@
 .sectionFaq {
-  padding-bottom: 64px;
+  padding: 56px 0;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -33,9 +33,8 @@
   margin: 0 auto;
 }
 
-.faqQuestionList,
-.faqImage {
-  width: 644px;
+.faqQuestionList {
+  width: 100%;
 }
 .faqQuestionList {
   display: flex;
@@ -45,24 +44,24 @@
   height: auto;
 }
 .faqImage {
-  position: absolute;
-  top: 0;
-  right: -96px;
+  display: none;
 }
+
 .faqQuestionItemTitle {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 40px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  width: 100%;
 }
 .faqTitle {
-  font-size: 28px;
+  font-size: 18px;
   text-align: right;
   color: var(--accent-button);
 }
 .fadingLine {
-  width: 542px;
+  width: 100%;
   height: 2px;
   background: linear-gradient(
     to right,
@@ -91,10 +90,10 @@
 .faqQuestionItem:hover {
   border: 1px solid var(--accent-button);
 }
-.faqQuestionItem:hover .faqAnswerText {
+.faqQuestionItemBtn:hover .faqAnswerText {
   color: var(--accent-button);
 }
-.faqQuestionItem:hover .faqIcon {
+.faqQuestionItemBtn:hover .faqIcon {
   fill: var(--accent-button);
 }
 .faqIcon {
@@ -107,9 +106,47 @@
   transform: rotate(180deg);
 }
 .faqAnswerText {
-  font-size: 18px;
+  font-size: 14px;
   color: var(--color-p);
 }
 .faqAnswerText:last-child {
   padding-top: 56px;
+}
+@media screen and (min-width: 768px) {
+  .sectionFaq {
+    padding: 40px 0;
+  }
+  .faqQuestionItemTitle {
+    margin-bottom: 56px;
+  }
+  .faqTitle {
+    font-size: 20px;
+  }
+  .faqAnswerText {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .sectionFaq {
+    padding: 104px 0 64px;
+  }
+  .faqQuestionList,
+  .faqImage {
+    /* width: 644px; */
+    width: 50%;
+  }
+  .faqImage {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: -46px;
+  }
+  .faqQuestionItemTitle {
+    margin-bottom: 24px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .faqImage {
+    right: -96px;
+  }
 }

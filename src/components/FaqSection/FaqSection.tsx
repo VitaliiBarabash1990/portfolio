@@ -78,7 +78,9 @@ const FaqSection = () => {
                   </svg>
                 </div>
                 {activeIndex === index ? (
-                  <p className={s.faqAnswerText}>{question.answer}</p>
+                  <p className={`${s.faqAnswerText} ${s.faqAnswerTextLong}`}>
+                    {question.answer}
+                  </p>
                 ) : (
                   ''
                 )}
