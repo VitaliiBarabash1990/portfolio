@@ -5,6 +5,7 @@
 }
 .projectContainer {
   padding: 0 68px;
+  max-width: 1440px;
 }
 .projectContainerSwipe {
   padding: 0;
@@ -228,7 +229,7 @@
 }
 @media screen and (min-width: 1280px) {
   .projectSection {
-    max-width: 1439px;
+    max-width: 1440px;
   }
   .projectContainer {
     padding: 0 78px 0 40px;
@@ -286,6 +287,6 @@
     padding: 97px 0 56px 0;
   }
   .projectRightSwiper {
-    width: 1284px;
+    /* width: 1284px; */
   }
 }

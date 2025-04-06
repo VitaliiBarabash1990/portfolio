@@ -73,22 +73,29 @@ const Services = () => {
       <div className="container">
         <div className={s.servicesWrapper}>
           <ul className={s.servicesContent}>
-            <li className={s.servicesContentList}>
+            <li
+              className={`${s.servicesContentList} ${s.servicesContentListMob}`}
+            >
               <button
                 className={
                   hundler
-                    ? `${s.servicesHundler}`
-                    : `${s.servicesHundlerActive}`
+                    ? `${s.nowrapTitle} ${s.servicesHundler}`
+                    : `${s.nowrapTitle} ${s.servicesHundlerActive}`
                 }
                 onClick={handlerIndividual}
               >
                 {t('handler_1')}
               </button>
+              <div className={s.servicesSeparatorArrow}>
+                <svg className={s.separatorArrowIcon}>
+                  <use href="/symbol-defs.svg#icon-separator-arrow"></use>
+                </svg>
+              </div>
               <button
                 className={
                   hundler
-                    ? `${s.servicesHundlerActive}`
-                    : `${s.servicesHundler}`
+                    ? `${s.widthTitle} ${s.servicesHundlerActive}`
+                    : `${s.widthTitle} ${s.servicesHundler}`
                 }
                 onClick={handlerComplex}
               >

@@ -50,23 +50,55 @@
   /* background: var(--background-tech); */
   display: flex;
   align-items: baseline;
+
+  gap: 16px;
+}
+
+.servicesContentListMob {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.servicesSeparatorArrow {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.separatorArrowIcon {
+  width: 8px;
+  height: 14px;
+  fill: var(--color-p);
+}
+.nowrapTitle {
+  white-space: nowrap;
+}
+.widthTitle {
+  width: 280px;
+  flex-shrink: 0;
 }
 .servicesHundlerActive {
   font-family: var(--second-family);
   font-weight: 300;
-  font-size: 20px;
-  color: var(--amiora-color-2);
-  border-bottom: 1px solid var(--amiora-color-2);
-  height: 48px;
-  margin-right: 112px;
+  font-size: 16px;
+  color: var(--accent-button);
+  line-height: 133%;
+  height: 44px;
+  text-align: left;
 }
 .servicesHundler {
   font-family: var(--second-family);
   font-weight: 300;
-  font-size: 20px;
+  font-size: 16px;
   color: var(--color-s);
-  line-height: 100%;
-  margin-right: 112px;
+  line-height: 133%;
+  text-align: left;
 }
 .servicesList {
   display: flex;
@@ -226,6 +258,29 @@
     border-radius: 8px;
     background: var(--background-tech);
   }
+  .servicesSeparatorArrow {
+    display: none;
+  }
+  .servicesContentListMob {
+    gap: 80px;
+  }
+  .widthTitle {
+    width: 100%;
+    flex-shrink: 1;
+  }
+  .servicesHundlerActive {
+    border-bottom: 1px solid var(--amiora-color-2);
+    color: var(--amiora-color-2);
+    height: 48px;
+    font-size: 18px;
+    padding-bottom: 26px;
+    line-height: 133.3%;
+  }
+  .servicesHundler {
+    align-self: flex-start;
+    font-size: 18px;
+    line-height: 133.3%;
+  }
   .servicesListItemleft {
     padding: 0 12px;
   }
@@ -262,6 +317,16 @@
   }
   .servicesContent {
     width: 100%;
+  }
+  .servicesContentListMob {
+    gap: 112px;
+  }
+  .servicesHundlerActive {
+    font-size: 20px;
+    padding-bottom: 24px;
+  }
+  .servicesHundler {
+    font-size: 20px;
   }
   .servicesTitle {
     font-size: 28px;
@@ -309,10 +374,11 @@
 }
 @media screen and (min-width: 1440px) {
   /* Якщо хочемо фіксований розмір */
-  /* .servicesWrapper {
-    width: 1248px;
+  .servicesWrapper {
+    /* width: 1248px; */
+    max-width: 1440px;
   }
-  .servicesContent {
+  /* .servicesContent {
     width: 1153px;
   } */
   /* Якщо хочемо фіксований розмір */

@@ -126,7 +126,7 @@
   }
   .heroLeftSide {
     gap: 104px;
-    padding-top: 0;
+    padding: 0;
   }
   .heroBtn {
     padding: 12px 40px 12px 48px;
