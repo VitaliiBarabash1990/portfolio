@@ -7,10 +7,17 @@
 }
 .adWrap.lazyLoaded {
   background-image: url('/img/Contacts/contacts_x1.jpg');
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 @media screen and (min-width: 1440px) {
   .adWrap.lazyLoaded {
     background-image: url('/img/background/Contacts/contacts_x1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   @media screen and (min-resolution: 2dppx),
     (min-resolution: 192dpi),
@@ -28,22 +35,25 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  max-width: 1440px;
 }
 .footerTitleBlock {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 40px;
-  margin-bottom: 56px;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 1440px;
 }
 .footerTitle {
-  font-size: 28px;
+  font-size: 18px;
   text-align: right;
   color: var(--accent-button);
   white-space: nowrap;
 }
 .fadingLine {
-  width: 885px;
+  width: 100%;
   height: 2px;
   background: linear-gradient(
     to right,
@@ -52,39 +62,47 @@
   );
 }
 .footerTop {
-  margin-bottom: 80px;
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-}
-.footerDescrItem {
-  width: 647px;
+  width: 100%;
+  margin-bottom: 56px;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footerDescrItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .footerText {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 170%;
   color: var(--color-p);
 }
 .footerContact {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 28px;
+  align-items: center;
+  gap: 32px;
 }
 
 .footerFormItem {
   border: 1px solid var(--border-form);
   border-radius: 14px;
-  padding: 50px;
-  width: 561px;
+  padding: 24px 12px;
+  width: 100%;
   height: auto;
   box-shadow: 10px 10px 50px 0 rgba(0, 98, 255, 0.03);
   background: inherit;
 }
 .footerContactItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
   transform: scale(1);
   transition: transform 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
@@ -134,31 +152,35 @@
 }
 .nameLabel {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
   text-transform: uppercase;
   color: var(--color-label);
 }
 .input {
   width: 100%;
-  height: 64px;
+  height: 48px;
   border-radius: 8px;
   padding: 20px;
   background: var(--background-form);
+  font-size: 14px;
 }
 .textArea {
   height: 114px;
 }
 .formBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 100px;
   padding: 14px 20px;
   width: 100%;
   max-width: 461px;
-  height: 55px;
+  height: 48px;
   background: var(--accent-button);
 
   font-family: var(--second-family);
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 150%;
   text-align: center;
   color: #0f0f0f;
@@ -184,4 +206,77 @@
 .footerBootomText {
   font-size: 18px;
   color: var(--color-f);
+}
+.footerBootomTextMob {
+  text-align: end;
+}
+@media screen and (min-width: 768px) {
+  .footerTop {
+    margin-bottom: 80px;
+  }
+  .footerTitleBlock {
+    margin-bottom: 80px;
+  }
+  .footerContact {
+    gap: 48px;
+  }
+  .footerContactItem {
+    height: 27px;
+  }
+  .footerFormItem {
+    padding: 50px;
+    width: 540px;
+  }
+  .footerTitle {
+    font-size: 20px;
+  }
+  .footerText {
+    font-size: 18px;
+  }
+  .nameLabel {
+    font-size: 16px;
+  }
+  .input {
+    height: 64px;
+  }
+  .formBtn {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footerTop {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .footerTitleBlock {
+    margin-bottom: 56px;
+  }
+  .footerContact {
+    align-items: flex-start;
+    gap: 28px;
+  }
+  .footerDescrItem {
+    width: 55%;
+    gap: 48px;
+  }
+  .footerFormItem {
+    width: 45%;
+  }
+  .formBtn {
+    height: 55px;
+  }
+  .footerContactItem {
+    height: 31px;
+  }
+  .footerTitle {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footerDescrItem {
+    width: 647px;
+  }
+  .footerFormItem {
+    width: 561px;
+  }
 }

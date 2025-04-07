@@ -196,7 +196,9 @@ export default function Footer() {
 
           <div className={s.footerBootom}>
             <p className={s.footerBootomText}>Created by Vitalii Barabash</p>
-            <p className={s.footerBootomText}>All rights reserved</p>
+            <p className={`${s.footerBootomText} ${s.footerBootomTextMob}`}>
+              All rights reserved
+            </p>
           </div>
         </div>
       </div>

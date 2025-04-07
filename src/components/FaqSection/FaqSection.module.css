@@ -8,10 +8,17 @@
 }
 .adWrap.lazyLoaded {
   background-image: url('/img/background/Faq/faq_x1.jpg');
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 @media screen and (min-width: 1440px) {
   .adWrap.lazyLoaded {
     background-image: url('/img/background/Faq/faq_x1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   @media screen and (min-resolution: 2dppx),
     (min-resolution: 192dpi),
@@ -30,6 +37,7 @@
   align-items: center;
   position: relative;
   width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
