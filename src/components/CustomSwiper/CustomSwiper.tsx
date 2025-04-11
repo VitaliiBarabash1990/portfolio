@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import {useMediaQuery} from 'react-responsive';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation} from 'swiper/modules';
 
@@ -22,6 +23,11 @@ const CustomSwiper = ({
   projects,
   isShort
 }: Props) => {
+  const mobile = useMediaQuery({maxWidth: 767});
+  console.log('activeProject', activeProject);
+  console.log('projects', projects);
+  console.log('isShort', isShort);
+  console.log('mobile', mobile);
   return (
     <div className={s.sliderContainer}>
       <Swiper
@@ -52,23 +58,36 @@ const CustomSwiper = ({
                   <div className={s.reviewCard}>
                     <div className={s.reviews_client_overflov}>
                       <picture className={s.aboutMePhotoPicture}>
-                        <source srcSet={project.image} type="image/webp" />
-                        <img src={project.image_x2} alt="Мій проект" />
+                        <source
+                          srcSet={mobile ? project.image_mob : project.image}
+                          type="image/jpg"
+                        />
+                        <img
+                          src={mobile ? project.image_mob_x2 : project.image_x2}
+                          alt="Мій проект"
+                        />
                       </picture>
                     </div>
                   </div>
                 </SwiperSlide>
               );
             })
-          : activeProject.image_project_x1.map((img, index) => {
+          : (mobile
+              ? activeProject.image_project_mob_x1
+              : activeProject.image_project_x1
+            ).map((img, index) => {
               return (
                 <SwiperSlide key={index} className={s.slide}>
                   <div className={s.reviewCard}>
                     <div className={s.reviews_client_overflov}>
                       <picture className={s.aboutMePhotoPicture}>
-                        <source srcSet={img} type="image/webp" />
+                        <source srcSet={img} type="image/jpg" />
                         <img
-                          src={activeProject.image_project_x2[index]}
+                          src={
+                            mobile
+                              ? activeProject.image_project_mob_x2[index]
+                              : activeProject.image_project_x2[index]
+                          }
                           alt="Мій проект"
                         />
                       </picture>

@@ -54,8 +54,8 @@
   min-width: 50%;
 }
 .fadingLine {
-  width: 854px;
-  height: 2px;
+  width: 100%;
+  height: 1px;
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0) 0%,

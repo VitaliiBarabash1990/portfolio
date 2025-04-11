@@ -17,19 +17,34 @@ const Projects = () => {
       text_long: t('text_long.0'),
       type: t('type.0'),
       image: '/img/projects/project_1_x1.jpg',
+      image_mob: '/img/projects/mob/project_1.1_mob_x1.jpg',
+      image_mob_x2:
+        '/img/projects/mob/project_1.1_mob_x1.jpg 1x, /img/projects/mob/project_1.1_mob_x2.jpg 2x',
       image_x2:
         '/img/projects/project_1_x1.jpg 1x, /img/projects/project_1_x2.jpg 2x',
       image_project_x1: [
-        '/img/projects/project_1.1_x1.jpg',
         '/img/projects/project_1.2_x1.jpg',
         '/img/projects/project_1.3_x1.jpg',
-        '/img/projects/project_1.4_x1.jpg'
+        '/img/projects/project_1.4_x1.jpg',
+        '/img/projects/project_1.1_x1.jpg'
+      ],
+      image_project_mob_x1: [
+        '/img/projects/mob/project_1.2_mob_x1.jpg',
+        '/img/projects/mob/project_1.3_mob_x1.jpg',
+        '/img/projects/mob/project_1.4_mob_x1.jpg',
+        '/img/projects/mob/project_1.1_mob_x1.jpg'
       ],
       image_project_x2: [
-        '/img/projects/project_1.1_x1.jpg 1x, /img/projects/project_1.1_x2.jpg 2x',
         '/img/projects/project_1.2_x1.jpg 1x, /img/projects/project_1.2_x2.jpg 2x',
         '/img/projects/project_1.3_x1.jpg 1x, /img/projects/project_1.3_x2.jpg 2x',
-        '/img/projects/project_1.4_x1.jpg 1x, /img/projects/project_1.4_x2.jpg 2x'
+        '/img/projects/project_1.4_x1.jpg 1x, /img/projects/project_1.4_x2.jpg 2x',
+        '/img/projects/project_1.1_x1.jpg 1x, /img/projects/project_1.1_x2.jpg 2x'
+      ],
+      image_project_mob_x2: [
+        '/img/projects/mob/project_1.2_mob_x1.jpg 1x, /img/projects/mob/project_1.2_mob_x2.jpg 2x',
+        '/img/projects/mob/project_1.3_mob_x1.jpg 1x, /img/projects/mob/project_1.3_mob_x2.jpg 2x',
+        '/img/projects/mob/project_1.4_mob_x1.jpg 1x, /img/projects/mob/project_1.4_mob_x2.jpg 2x',
+        '/img/projects/mob/project_1.1_mob_x1.jpg 1x, /img/projects/mob/project_1.1_mob_x2.jpg 2x'
       ],
       href: 'https://kolibry-studio-product-version.vercel.app/ua',
       technology: ['Next.js', 'Redux', 'JavaScript', 'HTML', 'CSS']
@@ -41,19 +56,34 @@ const Projects = () => {
       text_long: t('text_long.1'),
       type: t('type.0'),
       image: '/img/projects/project_2_x1.jpg',
+      image_mob: '/img/projects/mob/project_2.1_mob_x1.jpg',
+      image_mob_x2:
+        '/img/projects/mob/project_2.1_mob_x1.jpg 1x, /img/projects/mob/project_2.1_mob_x2.jpg 2x',
       image_x2:
         '/img/projects/project_2_x1.jpg 1x, /img/projects/project_2_x2.jpg 2x',
       image_project_x1: [
-        '/img/projects/project_2.4_x1.jpg',
-        '/img/projects/project_2.1_x1.jpg',
         '/img/projects/project_2.2_x1.jpg',
-        '/img/projects/project_2.3_x1.jpg'
+        '/img/projects/project_2.3_x1.jpg',
+        '/img/projects/project_2.4_x1.jpg',
+        '/img/projects/project_2.1_x1.jpg'
+      ],
+      image_project_mob_x1: [
+        '/img/projects/mob/project_2.2_mob_x1.jpg',
+        '/img/projects/mob/project_2.3_mob_x1.jpg',
+        '/img/projects/mob/project_2.4_mob_x1.jpg',
+        '/img/projects/mob/project_2.1_mob_x1.jpg'
       ],
       image_project_x2: [
-        '/img/projects/project_2.4_x1.jpg 1x, /img/projects/project_2.4_x2.jpg 2x',
-        '/img/projects/project_2.1_x1.jpg 1x, /img/projects/project_2.1_x2.jpg 2x',
         '/img/projects/project_2.2_x1.jpg 1x, /img/projects/project_2.2_x2.jpg 2x',
-        '/img/projects/project_2.3_x1.jpg 1x, /img/projects/project_2.3_x2.jpg 2x'
+        '/img/projects/project_2.3_x1.jpg 1x, /img/projects/project_2.3_x2.jpg 2x',
+        '/img/projects/project_2.4_x1.jpg 1x, /img/projects/project_2.4_x2.jpg 2x',
+        '/img/projects/project_2.1_x1.jpg 1x, /img/projects/project_2.1_x2.jpg 2x'
+      ],
+      image_project_mob_x2: [
+        '/img/projects/mob/project_2.2_mob_x1.jpg 1x, /img/projects/mob/project_2.2_mob_x2.jpg 2x',
+        '/img/projects/mob/project_2.3_mob_x1.jpg 1x, /img/projects/mob/project_2.3_mob_x2.jpg 2x',
+        '/img/projects/mob/project_2.4_mob_x1.jpg 1x, /img/projects/mob/project_2.4_mob_x2.jpg 2x',
+        '/img/projects/mob/project_2.1_mob_x1.jpg 1x, /img/projects/mob/project_2.1_mob_x2.jpg 2x'
       ],
       href: 'https://ventilation-system.vercel.app/',
       technology: ['Next.js', 'Redux', 'JavaScript', 'HTML', 'CSS']
@@ -113,7 +143,13 @@ const Projects = () => {
                   isShort={short}
                 />
               </li>
-              <li className={s.projectSwiperItem}>
+              <li
+                className={
+                  short
+                    ? `${s.projectSwiperItem} ${s.projectSwiperItemMob}`
+                    : `${s.projectSwiperItem}`
+                }
+              >
                 {short && (
                   <h5 className={`title ${s.swiperNameTitle}`}>
                     {activeProject.name}
@@ -134,12 +170,21 @@ const Projects = () => {
                     <h5 className={`title ${s.swiperTypeTitle}`}>
                       {activeProject.type}
                     </h5>
-                    <button className={s.swiperBtn} onClick={handleClick}>
-                      {short ? t('button_1') : t('button_2')}
-                      <svg className={s.swiperIcon}>
-                        <use href="/symbol-defs.svg#icon-arrow-bottom-left"></use>
-                      </svg>
-                    </button>
+                    <div className={s.swiperViewWraper}>
+                      <button className={s.swiperBtn} onClick={handleClick}>
+                        {short ? t('button_1') : t('button_2')}
+                        <svg className={s.swiperIcon}>
+                          <use href="/symbol-defs.svg#icon-arrow-bottom-left"></use>
+                        </svg>
+                      </button>
+                      <Link
+                        className={s.swiperViewLink}
+                        href={activeProject.href}
+                        target="_blank"
+                      >
+                        {t('button_3')}
+                      </Link>
+                    </div>
                   </div>
                 )}
               </li>
