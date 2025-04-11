@@ -21,6 +21,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.aboutMePhotoPicture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.aboutMePhotoPicture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .navButton {

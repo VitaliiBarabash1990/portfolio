@@ -2,10 +2,15 @@
 
 import React, {useState} from 'react';
 import s from './Projects.module.css';
-import CustomSwiper from '../CustomSwiper/CustomSwiper';
+// import CustomSwiper from '../CustomSwiper/CustomSwiper';
 import Link from 'next/link';
 import {useTranslations} from 'next-intl';
 import {Project} from '@/types/types';
+import dynamic from 'next/dynamic';
+
+const CustomSwiper = dynamic(() => import('../CustomSwiper/CustomSwiper'), {
+  ssr: false
+});
 
 const Projects = () => {
   const t = useTranslations('Projects');

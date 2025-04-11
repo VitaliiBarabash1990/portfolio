@@ -24,10 +24,6 @@ const CustomSwiper = ({
   isShort
 }: Props) => {
   const mobile = useMediaQuery({maxWidth: 767});
-  console.log('activeProject', activeProject);
-  console.log('projects', projects);
-  console.log('isShort', isShort);
-  console.log('mobile', mobile);
   return (
     <div className={s.sliderContainer}>
       <Swiper
@@ -56,18 +52,16 @@ const CustomSwiper = ({
               return (
                 <SwiperSlide key={project.id} className={s.slide}>
                   <div className={s.reviewCard}>
-                    <div className={s.reviews_client_overflov}>
-                      <picture className={s.aboutMePhotoPicture}>
-                        <source
-                          srcSet={mobile ? project.image_mob : project.image}
-                          type="image/jpg"
-                        />
-                        <img
-                          src={mobile ? project.image_mob_x2 : project.image_x2}
-                          alt="Мій проект"
-                        />
-                      </picture>
-                    </div>
+                    <picture className={s.aboutMePhotoPicture}>
+                      <source
+                        srcSet={mobile ? project.image_mob : project.image}
+                        type="image/jpg"
+                      />
+                      <img
+                        src={mobile ? project.image_mob_x2 : project.image_x2}
+                        alt="Мій проект"
+                      />
+                    </picture>
                   </div>
                 </SwiperSlide>
               );
@@ -79,19 +73,17 @@ const CustomSwiper = ({
               return (
                 <SwiperSlide key={index} className={s.slide}>
                   <div className={s.reviewCard}>
-                    <div className={s.reviews_client_overflov}>
-                      <picture className={s.aboutMePhotoPicture}>
-                        <source srcSet={img} type="image/jpg" />
-                        <img
-                          src={
-                            mobile
-                              ? activeProject.image_project_mob_x2[index]
-                              : activeProject.image_project_x2[index]
-                          }
-                          alt="Мій проект"
-                        />
-                      </picture>
-                    </div>
+                    <picture className={s.aboutMePhotoPicture}>
+                      <source srcSet={img} type="image/jpg" />
+                      <img
+                        src={
+                          mobile
+                            ? activeProject.image_project_mob_x2[index]
+                            : activeProject.image_project_x2[index]
+                        }
+                        alt="Мій проект"
+                      />
+                    </picture>
                   </div>
                 </SwiperSlide>
               );
