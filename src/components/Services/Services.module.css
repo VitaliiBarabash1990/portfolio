@@ -1,3 +1,6 @@
+.containerMob {
+  padding: 0 8px;
+}
 .sectionServices {
   margin: 0 auto;
 }
@@ -63,8 +66,8 @@
 }
 
 .servicesContentList {
-  padding: 24px 4px;
-  /* background: var(--background-tech); */
+  padding: 24px 16px;
+  background: var(--background-tech);
   display: flex;
   align-items: baseline;
 
@@ -72,16 +75,16 @@
 }
 
 .servicesContentListMob {
-  padding: 24px 0;
+  padding: 24px 16;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 24px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  gap: 8px;
+  /* overflow-x: auto;
+  scroll-snap-type: x mandatory; */
 }
 .servicesSeparatorArrow {
-  width: 40px;
+  width: 25px;
   height: 40px;
   display: flex;
   align-items: center;
@@ -89,8 +92,8 @@
   flex-shrink: 0;
 }
 .separatorArrowIcon {
-  width: 8px;
-  height: 14px;
+  width: 5px;
+  height: 9px;
   fill: var(--color-p);
 }
 .nowrapTitle {
@@ -130,12 +133,19 @@
 }
 .servicesListItemleft {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  column-gap: 120px;
+  /* column-gap: 120px; */
   row-gap: 32px;
   width: 100%;
+}
+.serviceListDescr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .servicesType {
   font-family: var(--font-family);
@@ -239,6 +249,7 @@
 .servicesTitleBlock {
   width: 100%;
   height: 39px;
+  padding: 0 16px;
 }
 .servicesTitleContent {
   display: flex;
@@ -266,6 +277,7 @@
   }
   .servicesTitleBlock {
     height: 24px;
+    padding: 0;
   }
   .servicesTitleContent {
     height: 100%;
@@ -273,7 +285,7 @@
   .servicesContentList {
     padding: 24px;
     border-radius: 8px;
-    background: var(--background-tech);
+    /* background: var(--background-tech); */
   }
   .servicesSeparatorArrow {
     display: none;
@@ -300,6 +312,12 @@
   }
   .servicesListItemleft {
     padding: 0 12px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .serviceListDescr {
+    width: 55%;
   }
   .servicesBtn,
   .servicesTabBtn {
@@ -380,6 +398,11 @@
   .servicesListItemleft {
     display: block;
     width: 114px;
+    padding: 0;
+  }
+  .serviceListDescr {
+    width: 100%;
+    flex-direction: column;
   }
   .servicesTabBtn {
     display: none;

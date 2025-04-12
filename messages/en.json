@@ -90,8 +90,9 @@
   },
   "Services": {
     "title": "Services",
-    "handler_1": "Site layout",
+    "handler_1": "Website layout",
     "handler_2": "Complex site creation: from design to launch",
+    "handler_3": "Turnkey websites",
     "button_1": "Details",
     "button_2": "Collapse",
     "services": [

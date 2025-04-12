@@ -2,12 +2,14 @@
 import React, {useEffect, useState} from 'react';
 import s from './Services.module.css';
 import {useTranslations} from 'next-intl';
+import {useMediaQuery} from 'react-responsive';
 
 const Services = () => {
   const t = useTranslations('Services');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [hundler, setHundler] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const isMobile = useMediaQuery({maxWidth: 767});
 
   useEffect(() => {
     setTimeout(() => {
@@ -70,7 +72,7 @@ const Services = () => {
       id="Services"
       className={`section ${s.sectionServices} ${s.adWrap} ${isLoaded ? s.lazyLoaded : ''}`}
     >
-      <div className="container">
+      <div className={isMobile ? `${s.containerMob}` : `container`}>
         <div className={s.servicesWrapper}>
           <ul className={s.servicesContent}>
             <li
@@ -99,17 +101,19 @@ const Services = () => {
                 }
                 onClick={handlerComplex}
               >
-                {t('handler_2')}
+                {isMobile ? t('handler_3') : t('handler_2')}
               </button>
             </li>
             {Services.map((service, index) => (
               <li key={index} className={s.servicesContentList}>
                 <ul className={s.servicesList}>
                   <li className={s.servicesListItemleft}>
-                    <h4 className={`title ${s.servicesType}`}>
-                      {service.type}
-                    </h4>
-                    <p className={s.servicesPrice}>{service.price}</p>
+                    <div className={s.serviceListDescr}>
+                      <h4 className={`title ${s.servicesType}`}>
+                        {service.type}
+                      </h4>
+                      <p className={s.servicesPrice}>{service.price}</p>
+                    </div>
                     <button
                       className={s.servicesTabBtn}
                       onClick={() => handleCollapse(index)}
