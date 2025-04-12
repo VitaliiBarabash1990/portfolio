@@ -6,17 +6,10 @@
 .adWrap {
   background-color: transparent;
 }
-.adWrap.lazyLoaded {
-  background-image: url('/img/background/Faq/faq_x1.jpg');
-  min-width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 375px) {
   .adWrap.lazyLoaded {
-    background-image: url('/img/background/Faq/faq_x1.jpg');
-    background-size: cover;
+    background-image: url('/img/background/Faq/faq_mob_x1.jpg');
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -24,10 +17,34 @@
     (min-resolution: 192dpi),
     (-webkit-min-device-pixel-ratio: 2) {
     .adWrap.lazyLoaded {
-      background-image: url('/img/background/Faq/faq_x2.jpg');
-      background-size: cover;
+      background-image: url('/img/background/Faq/faq_mob_x2.jpg');
+      background-size: 100% 100%;
       background-position: center;
       background-repeat: no-repeat;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .adWrap.lazyLoaded {
+    background-image: url('/img/background/Faq/faq_tablet_x1.jpg');
+  }
+  @media screen and (min-resolution: 2dppx),
+    (min-resolution: 192dpi),
+    (-webkit-min-device-pixel-ratio: 2) {
+    .adWrap.lazyLoaded {
+      background-image: url('/img/background/Faq/faq_tablet_x2.jpg');
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .adWrap.lazyLoaded {
+    background-image: url('/img/background/Faq/faq_x1.jpg');
+  }
+  @media screen and (min-resolution: 2dppx),
+    (min-resolution: 192dpi),
+    (-webkit-min-device-pixel-ratio: 2) {
+    .adWrap.lazyLoaded {
+      background-image: url('/img/background/Faq/faq_x2.jpg');
     }
   }
 }
