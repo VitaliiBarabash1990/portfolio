@@ -7,6 +7,14 @@
 .adWrap {
   background-color: transparent;
 }
+.stepsAccordion {
+  align-self: stretch;
+  padding-bottom: 24px;
+  border-radius: 8px;
+  border-bottom: 0.5px solid #5a5a5a;
+  backdrop-filter: blur(10px);
+}
+
 @media screen and (min-width: 375px) {
   .adWrap.lazyLoaded {
     background-image: url('/img/background/Steps/steps_mob_x1.jpg');

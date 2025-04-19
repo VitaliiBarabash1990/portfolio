@@ -103,6 +103,7 @@
   background: var(--background-tech);
   border-radius: 8px;
   border: 1px solid var(--accent-button-rgb);
+  border-bottom: 1px solid var(--amiora-color-1);
   width: 100%;
   cursor: pointer;
 }
@@ -149,6 +150,10 @@
   }
   .faqAnswerText {
     font-size: 18px;
+  }
+  .faqQuestionItem {
+    background: var(--background-form);
+    border-bottom: none;
   }
 }
 @media screen and (min-width: 1280px) {

@@ -285,7 +285,7 @@
   .servicesContentList {
     padding: 24px;
     border-radius: 8px;
-    /* background: var(--background-tech); */
+    background: var(--background-form);
   }
   .servicesSeparatorArrow {
     display: none;
@@ -403,6 +403,12 @@
   .serviceListDescr {
     width: 100%;
     flex-direction: column;
+    align-items: flex-start;
+  }
+  .servicesPrice {
+    font-size: 18px;
+    height: 34px;
+    border-bottom: 1px solid var(--color-p);
   }
   .servicesTabBtn {
     display: none;

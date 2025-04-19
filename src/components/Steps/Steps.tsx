@@ -4,10 +4,13 @@ import React, {useEffect, useState} from 'react';
 import s from './Steps.module.css';
 import AccordionList from '../AccordionList/AccordionList';
 import {useTranslations} from 'next-intl';
+import {useMediaQuery} from 'react-responsive';
+import StepsSwiper from '../StepsSwiper/StepsSwiper';
 
 const Steps = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const t = useTranslations('Steps');
+  const isLaptop = useMediaQuery({minWidth: 1280});
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,7 +30,7 @@ const Steps = () => {
             <div className={s.fadingLine}></div>
           </li>
           <li className={s.stepsAccordion}>
-            <AccordionList />
+            {isLaptop ? <AccordionList /> : <StepsSwiper />}
           </li>
         </ul>
       </div>

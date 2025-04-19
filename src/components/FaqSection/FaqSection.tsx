@@ -2,10 +2,11 @@
 
 import React, {useEffect, useState} from 'react';
 import s from './FaqSection.module.css';
-import {useTranslations} from 'next-intl';
+import {useLocale, useTranslations} from 'next-intl';
 
 const FaqSection = () => {
   const t = useTranslations('Faq');
+  const isLocal = useLocale();
   const [activeIndex, setActiveIndex] = useState<null | number>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -90,10 +91,21 @@ const FaqSection = () => {
           <div className={s.faqImage}>
             <picture className={s.aboutMePhotoPicture}>
               <source
-                srcSet="/img/faq/image_hand.webp 1x, /img/faq/image_hand_x2.webp 2x"
+                srcSet={
+                  isLocal === 'ua'
+                    ? `/img/faq/image_hand.webp 1x, /img/faq/image_hand_x2.webp 2x`
+                    : `/img/faq/image_hand_en.webp 1x, /img/faq/image_hand_en_x2.webp 2x`
+                }
                 type="image/webp"
               />
-              <img src="/img/faq/image_hand.webp" alt="Часті запитання" />
+              <img
+                src={
+                  isLocal === 'ua'
+                    ? `/img/faq/image_hand.webp`
+                    : `/img/faq/image_hand_en.webp`
+                }
+                alt="Часті запитання"
+              />
             </picture>
           </div>
         </div>
