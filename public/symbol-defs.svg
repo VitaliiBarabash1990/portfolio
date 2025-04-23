@@ -57,12 +57,22 @@
 <path d="M17.559 17.651l-14.047 13.207-3.511-3.301 12.292-11.556-12.292-11.556 3.511-3.301 14.047 13.207c0.466 0.438 0.727 1.031 0.727 1.651s-0.262 1.213-0.727 1.651z"></path>
 </symbol>
 
-<symbol id="icon-Line-short" viewBox="0 0 288 32">
-<path stroke-width="16" stroke-miterlimit="4" stroke-linecap="round" stroke-linejoin="miter" d="M16 16h256"></path>
+<symbol id="icon-Line-short" viewBox="0 0 100 1" preserveAspectRatio="none">
+  <line
+    x1="0" y1="0.5" x2="100" y2="0.5"
+    stroke="currentColor"
+    stroke-width="1"
+    stroke-linecap="round"
+  />
 </symbol>
 
-<symbol id="icon-Line-long" viewBox="0 0 512 32">
-<path stroke-width="16" stroke-miterlimit="4" stroke-linecap="round" stroke-linejoin="miter" d="M16 16h480"></path>
+<symbol id="icon-Line-long" viewBox="0 0 100 1" preserveAspectRatio="none">
+  <line
+    x1="0" y1="0.5" x2="100" y2="0.5"
+    stroke="currentColor"
+    stroke-width="1"
+    stroke-linecap="round"
+  />
 </symbol>
 
 </defs>

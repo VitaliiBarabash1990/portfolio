@@ -168,7 +168,9 @@
   }
   .aboutMeShadow {
     position: absolute;
-    width: 632px;
+    bottom: -20px;
+    right: -10px;
+    width: 150%;
     height: 589px;
     background: linear-gradient(180deg, rgba(0, 2, 5, 0) 85.5%, #000205 100%);
     transform: rotate(0deg);

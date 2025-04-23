@@ -3,12 +3,14 @@
 import React, {useEffect, useState} from 'react';
 import s from './FaqSection.module.css';
 import {useLocale, useTranslations} from 'next-intl';
+import {useMediaQuery} from 'react-responsive';
 
 const FaqSection = () => {
   const t = useTranslations('Faq');
   const isLocal = useLocale();
   const [activeIndex, setActiveIndex] = useState<null | number>(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const isMobile = useMediaQuery({maxWidth: 767});
 
   useEffect(() => {
     setTimeout(() => {
@@ -53,7 +55,7 @@ const FaqSection = () => {
       id="Faq"
       className={`section ${s.sectionFaq} ${s.adWrap} ${isLoaded ? s.lazyLoaded : ''}`}
     >
-      <div className="container">
+      <div className={isMobile ? `${s.containerMob}` : `container`}>
         <div className={s.faqWrapper}>
           <ul className={s.faqQuestionList}>
             <li className={s.faqQuestionItemTitle}>

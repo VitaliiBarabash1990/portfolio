@@ -107,7 +107,7 @@
 }
 
 .footerFormItem {
-  border: 1px solid var(--border-form);
+  /* border: 1px solid var(--border-form); */
   border-radius: 14px;
   padding: 24px 12px;
   width: 100%;
@@ -157,7 +157,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 16px;
 }
 .label {
@@ -180,6 +180,7 @@
   padding: 20px;
   background: var(--background-form);
   font-size: 14px;
+  border-bottom: 1px solid var(--amiora-color-1);
 }
 .textArea {
   height: 114px;
@@ -243,6 +244,7 @@
   .footerFormItem {
     padding: 50px;
     width: 540px;
+    border: 1px solid var(--border-form);
   }
   .footerTitle {
     font-size: 20px;

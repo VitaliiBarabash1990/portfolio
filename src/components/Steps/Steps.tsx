@@ -9,6 +9,7 @@ import StepsSwiper from '../StepsSwiper/StepsSwiper';
 
 const Steps = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   const t = useTranslations('Steps');
   const isLaptop = useMediaQuery({minWidth: 1280});
 
@@ -16,6 +17,10 @@ const Steps = () => {
     setTimeout(() => {
       setIsLoaded(true);
     }, 10);
+  }, []);
+
+  useEffect(() => {
+    setIsClient(true);
   }, []);
 
   return (
@@ -30,7 +35,7 @@ const Steps = () => {
             <div className={s.fadingLine}></div>
           </li>
           <li className={s.stepsAccordion}>
-            {isLaptop ? <AccordionList /> : <StepsSwiper />}
+            {isClient && (isLaptop ? <AccordionList /> : <StepsSwiper />)}
           </li>
         </ul>
       </div>

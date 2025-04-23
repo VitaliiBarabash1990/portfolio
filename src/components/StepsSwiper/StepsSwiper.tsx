@@ -102,13 +102,21 @@ const StepsSwiper = () => {
 
         <div className={s.paginationWraper}>
           {Steps.map((step, index) => (
-            <div key={index}>
+            <div key={index} className={s.paginationItem}>
               {index === activeSlide ? (
-                <svg className={s.boolitLongIcon}>
+                <svg
+                  className={s.boolitLongIcon}
+                  preserveAspectRatio="none"
+                  viewBox="0 0 100 1"
+                >
                   <use href="/symbol-defs.svg#icon-Line-long"></use>
                 </svg>
               ) : (
-                <svg className={s.boolitShortIcon}>
+                <svg
+                  className={s.boolitShortIcon}
+                  preserveAspectRatio="none"
+                  viewBox="0 0 100 1"
+                >
                   <use href="/symbol-defs.svg#icon-Line-short"></use>
                 </svg>
               )}
