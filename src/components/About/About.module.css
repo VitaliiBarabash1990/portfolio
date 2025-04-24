@@ -170,7 +170,7 @@
   }
   .aboutMePhoto {
     position: absolute;
-    right: -46px;
+    right: -38px;
   }
   .aboutMeShadow {
     position: absolute;
@@ -202,6 +202,6 @@
 }
 @media screen and (min-width: 1440px) {
   .aboutMePhoto {
-    right: -96px;
+    right: -86px;
   }
 }
