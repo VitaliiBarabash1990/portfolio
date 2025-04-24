@@ -10,7 +10,16 @@ const FaqSection = () => {
   const isLocal = useLocale();
   const [activeIndex, setActiveIndex] = useState<null | number>(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const isMobile = useMediaQuery({maxWidth: 767});
+  // const isMobile = useMediaQuery({maxWidth: 767});
+  const [isMobile, setIsMobile] = useState(false); // дефолт збігається з SSR
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 767px)');
+    setIsMobile(mq.matches); // після гідратації змінюємо
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {

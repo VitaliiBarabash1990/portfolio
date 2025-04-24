@@ -3,13 +3,15 @@ import React, {useEffect, useState} from 'react';
 import s from './Services.module.css';
 import {useTranslations} from 'next-intl';
 import {useMediaQuery} from 'react-responsive';
+import useIsMobile from '@/lib/IsMobile';
 
 const Services = () => {
   const t = useTranslations('Services');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [hundler, setHundler] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  const isMobile = useMediaQuery({maxWidth: 767});
+  // const isMobile = useMediaQuery({maxWidth: 767});
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     setTimeout(() => {
