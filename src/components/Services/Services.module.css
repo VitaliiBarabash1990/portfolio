@@ -286,7 +286,7 @@
   .servicesContentList {
     padding: 24px;
     border-radius: 8px;
-    background: var(--background-form);
+    /* background: var(--background-form); */
   }
   .servicesSeparatorArrow {
     display: none;

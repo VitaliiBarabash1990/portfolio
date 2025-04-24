@@ -178,7 +178,7 @@
   height: 48px;
   border-radius: 8px;
   padding: 20px;
-  background: var(--background-form);
+  background: var(--background-tech);
   font-size: 14px;
   border-bottom: 1px solid var(--amiora-color-1);
 }
