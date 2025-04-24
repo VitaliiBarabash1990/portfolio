@@ -135,11 +135,16 @@
   transform: rotate(180deg);
 }
 .faqAnswerText {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--color-p);
 }
 .faqAnswerText:last-child {
   padding-top: 56px;
+}
+@media screen and (min-width: 375px) {
+  .faqAnswerText {
+    font-size: 14px;
+  }
 }
 @media screen and (min-width: 768px) {
   .sectionFaq {
