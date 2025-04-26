@@ -326,6 +326,7 @@
     font-size: 18px;
     padding-bottom: 26px;
     line-height: 133.3%;
+    width: auto;
   }
   .servicesHundler {
     align-self: flex-start;

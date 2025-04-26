@@ -124,8 +124,8 @@
   position: absolute;
   min-width: 300px;
   width: 100%;
-  aspect-ratio: 4 / 3.75;
-  background: linear-gradient(180deg, rgba(0, 2, 5, 0) 85.5%, #000205 100%);
+  aspect-ratio: 4 / 4.03;
+  background: linear-gradient(180deg, rgba(0, 2, 5, 0) 85.5%, #000205 93%);
   transform: rotate(0deg);
   z-index: 1;
 }
@@ -178,7 +178,7 @@
     right: -10px;
     width: 150%;
     height: 589px;
-    background: linear-gradient(180deg, rgba(0, 2, 5, 0) 85.5%, #000205 100%);
+    background: linear-gradient(180deg, rgba(0, 2, 5, 0) 85.5%, #000205 97%);
     transform: rotate(0deg);
     z-index: 1;
   }

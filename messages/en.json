@@ -98,7 +98,7 @@
     "services": [
       {
         "type": "Landing",
-        "price": "From 200 USD",
+        "price": "From 150 USD",
         "text_short_individual": "A landing page is a one-page site that aims to attract customers and increase conversions. It is used to present a specific product, service or event, as well as to collect contact details of potential customers. They have a well-thought-out structure, visually appealing design and clear calls to action that contribute to the achievement of marketing goals.",
         "text_long_individual": "As a developer, I create responsive, fast and productive landing pages that not only attract attention, but also lead users to a specific action - purchase, registration or subscription. Using Next.js and React, I provide optimized loading speed, compatibility with mobile devices, cross-browser support and SEO optimization for better visibility in search engines. My landing pages can include interactive elements, animations, feedback forms, connection to CRM and analytical systems to track conversions. \n\n - What's included: market and competitor research, page structure development, data collection form setup, analytics integration, mobile responsiveness, performance testing. \n - Delivery time: 2-3 weeks.",
         "text_short_complex": "A landing page is not just a one-page website but a powerful marketing tool designed to attract attention, present your offer, and increase conversions. A comprehensive approach to landing page development includes both effective design and technical implementation that meets business needs and user expectations.",
@@ -114,7 +114,7 @@
       },
       {
         "type": "Catalog",
-        "price": "From 200 USD",
+        "price": "From 300 USD",
         "text_short_individual": "A catalog is a multi-page site for the presentation of goods or services with the possibility of a detailed description, but without online shopping. It is suitable for businesses that want to provide information about their range or services, provide convenient navigation and structure.",
         "text_long_individual": "I develop catalog sites with clear navigation, quick search, filtering and sorting of products. I use Next.js and React technologies to ensure stable site operation, optimize loading speed, and effectively manage large amounts of data. I integrate with CRM to manage product and customer data, set up SEO to increase visibility in search engines. \n\n - What is included: development of the main page, categories, product cards, integration of search filters, preparation for integration with CRM, configuration of analytics. \n - Implementation period: 4-6 weeks.",
         "text_short_complex": "A catalog website with a comprehensive approach is a detailed, stylish, and functional tool for showcasing a wide range of products or services. It not only presents the product lineup but also helps users navigate the catalog easily and find the necessary information.",
@@ -122,7 +122,7 @@
       },
       {
         "type": "Store",
-        "price": "From 200 USD",
+        "price": "From 350 USD",
         "text_short_individual": "An online store is a site for online sales with a shopping cart, payment systems, an order management system and personal user accounts. It is suitable for businesses looking to automate sales processes and increase revenue through an online presence.",
         "text_long_individual": "I create online stores with full functionality, responsive design, integration of payment systems, shopping cart settings, product filtering, order management and user support. I use Next.js and React to ensure high performance, reliability and fast loading. Additionally, I configure integrations with CRM, product accounting systems, analytics and marketing tools. \n\n - What's included: product pages, shopping cart, payment systems, personal user account, analytics integration, SEO optimization, CRM setup. \n - Lead time: 6-8 weeks.",
         "text_short_complex": "An e-commerce website with a comprehensive approach is not just a website but a full-fledged sales platform with stylish design, user-friendly navigation, and complete functionality for online commerce. It is an effective tool for scaling your business and increasing revenue.",
