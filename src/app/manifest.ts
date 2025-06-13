@@ -2,7 +2,7 @@ import {MetadataRoute} from 'next';
 import {getTranslations} from 'next-intl/server';
 
 export default async function manifest(): Promise<MetadataRoute.Manifest> {
-  const locale = 'ua';
+  const locale = 'en';
   const t = await getTranslations({locale, namespace: 'Manifest'});
 
   return {
